@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+
+<g:requires name="jquery.datatables.min.jsdbx" />
+
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          Mes Incidents en cours
+        </a>
+        <span id="incTotal" class="badge"></span>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse">
+      <div class="panel-body">
+        <g:content_block type="content_block_lists" id="2f0a6bf34dd8ad80bc95842eaf535488" />
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+          Mes Incidents fermés
+        </a>
+        <span id="inc2Total" class="badge"></span>
+      </h4>
+    </div>
+    <div id="collapseFive" class="panel-collapse collapse">
+      <div class="panel-body">
+        <g:content_block type="content_block_lists" id="950b90fd3773424055ad19a543990e10" />
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          Mes Demandes en cours
+        </a>
+        <span id="reqTotal" class="badge"></span>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+
+        <g:content_block type="content_block_lists" id="d093a3ff4d98ad80bc95842eaf535440" />
+      </div>
+    </div>
+  </div>
+	<div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+          Mes Demandes fermées
+        </a>
+        <span id="req2Total" class="badge"></span>
+      </h4>
+    </div>
+    <div id="collapseSix" class="panel-collapse collapse">
+      <div class="panel-body">
+
+        <g:content_block type="content_block_lists" id="01ac98fd3773424055ad19a543990e3a" />
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+          Mes Approbations en attente
+        </a>
+        <span id="appTotal" class="badge"></span>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+         <g:content_block type="content_block_lists" id="307e57fb4d98ad80bc95842eaf535429" />
+      </div>
+    </div>
+  </div>
+  <!--<div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+          My Change Requests
+        </a>
+        <span id="chgTotal" class="badge"></span>
+      </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse">
+      <div class="panel-body">
+         <g:content_block type="content_block_lists" id="5c2b5cc64db8adc0bc95842eaf535436" />
+      </div>
+    </div>
+  </div>-->
+	<!--
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+          My Other Tasks
+        </a>
+        <span id="tskTotal" class="badge"></span>
+      </h4>
+    </div>
+    <div id="collapseFive" class="panel-collapse collapse">
+      <div class="panel-body">
+         <g:content_block type="content_block_lists" id="13471c064db8adc0bc95842eaf535424" />
+      </div>
+    </div>
+  </div>
+	-->
+</div>
+
+
+
+</j:jelly>

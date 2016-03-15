@@ -1,0 +1,24 @@
+function onSubmit() {
+    var isPortal = parent.document.URL.indexOf('oasis') > 1;
+	var instance = null;
+	
+	var rec = new GlideRecord('sys_properties');
+	rec.addQuery('name', 'instance_name');
+	rec.query();
+	if(rec.next()){
+		instance = rec.value;
+	}
+	
+	if(instance == null){
+		instance = "instanceName";
+	}
+	
+	var URL = "https://" + instance + ".service-now.com/" + "oasis/" + "suivi.do";
+
+	if(isPortal == true){
+		top.window.location = URL;
+	}
+}
+
+
+A mettre dans un client script en OnSummit de la table voulue.

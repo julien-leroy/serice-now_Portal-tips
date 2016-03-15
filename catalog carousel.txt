@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+    <g:evaluate>
+      var sectionGR = new GlideRecord('menu_section');
+      sectionGR.addQuery('content_block_menu', menuGR.getUniqueValue());
+      sectionGR.addQuery('active', 'true');
+      sectionGR.orderBy('order');
+      sectionGR.query();
+   </g:evaluate>
+    <g:cms_menu_functions />
+    <j:if test="${sectionGR.hasNext()}">
+      <div class="row">
+
+      	<div id="owl-categories" class="owl-carousel">
+
+            <j:while test="${sectionGR.next()}">
+                <j:if test="${canViewMenu(sectionGR)}">
+                  <div class="sport_menu_block_col">
+                    <div class="sport_menu_block tip" style="background-color:${sectionGR.u_menu_section_color.getDisplayValue()};" data-toggle="tooltip" data-placement="top" data-container="body" title="${sectionGR.second_level_text.getDisplayValue()}">
+
+
+                      <div class="sport_menu_block_top">
+                      <g:cms_menu_set_url_and_target link_sysid="${sectionGR.getUniqueValue()}" />
+                      <j:switch on="${jvar_link_url}">
+                         <j:case value="">
+                              <!-- <div class="sport_menu_section_hover">${sectionGR.second_level_text.getDisplayValue()}</div> -->
+
+                              <j:if test="${sectionGR.u_font_awesome_icon.getDisplayValue()!=''}">
+                                  <!-- <img src="${sectionGR.image.getDisplayValue()}" /> -->
+                                  <i class="${sectionGR.u_font_awesome_icon.getDisplayValue()}"></i>
+                              </j:if>
+                             <label class="sport_menu_block_category">${sectionGR.name.getDisplayValue()}</label>
+                         </j:case>
+                         <j:default>
+                            <a href="${jvar_link_url}" target="${jvar_link_target}">
+                              <j:if test="${sectionGR.u_font_awesome_icon.getDisplayValue()!=''}">
+                                  <!-- <img src="${sectionGR.image.getDisplayValue()}" /> -->
+                                  <i class="${sectionGR.u_font_awesome_icon.getDisplayValue()}"></i>
+                              </j:if>
+                              <label class="sport_menu_block_category">${sectionGR.name.getDisplayValue()}</label>
+                            </a>
+                         </j:default>
+                      </j:switch>
+                      </div>
+
+
+                      <j:set var="jvar_t" value="${sectionGR.sys_id}" />
+                      <g:evaluate jelly="true">
+                        var itemGR = new GlideRecord('menu_item');
+                         itemGR.addQuery('menu_section', jelly.jvar_t);
+                         itemGR.addQuery('active', 'true');
+						 itemGR.setLimit(6);
+                         itemGR.orderBy('order');
+                         itemGR.query();
+						 itemGR.setLimit(6);
+                      </g:evaluate>
+
+
+
+                        <j:if test="${itemGR.hasNext()}">
+                          <hr />
+                          <div id="sport_menu_block_links">
+                              <j:while test="${itemGR.next()}">
+                                  <j:if test="${canViewMenu(itemGR)}">
+                                      <g:cms_menu_set_url_and_target />
+                                      <a class="sport_menu_block_item" href="${jvar_link_url}" target="${jvar_link_target}">${itemGR.name.getDisplayValue()}</a>
+                                  </j:if>
+                              </j:while>
+                              </div>
+                        </j:if>
+
+
+                    </div> <!-- sport_menu_block -->
+                  </div>
+                </j:if>
+            </j:while>
+
+        </div> <!-- owl categories -->
+
+      </div> <!-- row -->
+    </j:if>
+    <!-- <div style="clear:both;" /> -->
+    <!-- untangle floating divs -->
+
+    <g:requires name="owl.carousel.jsdbx" />
+
+    <script>
+   $j("#owl-categories").owlCarousel({
+      navigation:true,
+      items:3
+
+   });
+    </script>
+</j:jelly>

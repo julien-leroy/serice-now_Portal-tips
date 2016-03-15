@@ -1,0 +1,23 @@
+<script>
+	$j(".login").append('<a target="_blank" href="https://dalkiatest.service-now.com/$pwd_reset.do?sysparm_url=ad_reset">' + "${gs.getMessage('pwd_reset')}" + '</a>');
+	// ceci permet d'ajouter un lien en desous du bouton connexion. ici c'est "J'ai oublié mon mot de passe"
+	$j("#login-div").hide();
+	var connectForm = $j("#login-div").html();
+	$j("#login-div").html("");
+	var loginDiv = function() {
+		if($j("#login-div").html() == ""){
+			$j("#login-div").html(connectForm);
+		} else {
+			$j("#login-div").html("");
+		}
+		$j("#login-div").toggle();
+	}		
+</script>
+
+
+<j:if test="${gs.isLoggedIn()==false}">
+	<div id="login-div">	
+		<i class="fa fa-times fa-3x" onclick="javascript:loginDiv()" style="color: #CCCCCC; margin:20px"></i>
+		<g:insert_form name="login" />
+	</div>
+</j:if>

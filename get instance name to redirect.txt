@@ -1,0 +1,1 @@
+var URL = "https://" + "${gs.getProperty('instance_name')}" + ".service-now.com/" + "oasis" + "suivi.do";

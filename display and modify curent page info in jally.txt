@@ -1,0 +1,5 @@
+display page info : 
+
+<p class="page_description">
+	 	    ${current_page.getDescription()}
+		</p><br/>

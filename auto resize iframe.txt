@@ -1,0 +1,8 @@
+onResize = function() {
+	setInterval(function(){ 
+		var wHeight = $j('#gsft_main').contents().find('html').find("body").height();
+		$j('#gsft_main').height(wHeight); 
+	}, 500);
+}
+
+$j(document).ready(onResize());

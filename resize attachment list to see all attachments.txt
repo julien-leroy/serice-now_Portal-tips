@@ -1,0 +1,24 @@
+Client script OnLoad on your desired view :
+
+function onLoad() {
+ 
+/*
+Test sur la vue
+Récupération de la valeur du scrollheight
+Division par 20
+Multiplication par 1,4
+Stockage dans une variable
+$j("#header_attachment_list").height(variable);
+*/
+
+
+var heightHidden = document.getElementById("header_attachment_list").scrollHeight;
+
+var nbLines = Math.round(heightHidden/20);
+
+var newHeight = nbLines*1.4;
+
+document.getElementById("header_attachment").style.height = newHeight + "em";
+
+   
+}

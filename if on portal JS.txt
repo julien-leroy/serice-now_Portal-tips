@@ -1,0 +1,7 @@
+<script>
+
+var isPortal = parent.document.URL.indexOf('NomDuPortail') != -1;
+
+if(isPortal){this is true}
+
+</script>
