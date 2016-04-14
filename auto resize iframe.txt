@@ -6,3 +6,19 @@ onResize = function() {
 }
 
 $j(document).ready(onResize());
+
+
+
+//Scrollbar
+onResize = function() {
+	if($j('#iframe_supplier-search')){
+		var interval = setInterval(function(){ 
+			$j('#iframe_supplier-search').contents().find('html').find("body").css('overflow', 'hidden');
+			$j('#iframe_supplier-search').contents().find('html').find("body").find(".section_header_content_no_scroll").css('overflow', 'hidden');
+		}, 500);
+interval();
+setTimeout(function(){clearTimeout(myVar)}, 5000);
+	}
+}
+
+$j(document).ready(onResize());
