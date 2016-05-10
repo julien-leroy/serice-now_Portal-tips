@@ -1,0 +1,1603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2015-05-27 20:23:56">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<application_version/>
+<collisions/>
+<commit_date/>
+<deleted/>
+<description/>
+<inserted/>
+<name>Sport CMS 3_16 (Fuji)</name>
+<origin_sys_id/>
+<release_date/>
+<remote_sys_id>2c32d341ef1002005b14a42d6a22565f</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_created_by>admin_SHARE</sys_created_by>
+<sys_created_on>2015-05-27 20:23:55</sys_created_on>
+<sys_id>2c0b046def1002005b14a42d6a2256f9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin_SHARE</sys_updated_by>
+<sys_updated_on>2015-05-27 20:23:55</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>content_block_programmatic_673c5cb14dfc6dc0bc95842eaf535460</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="content_block_programmatic"&gt;&lt;content_block_programmatic action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;category&gt;general&lt;/category&gt;&lt;condition/&gt;&lt;conditional&gt;false&lt;/conditional&gt;&lt;frame/&gt;&lt;logged_on&gt;false&lt;/logged_on&gt;&lt;name&gt;Sport Dynamic Todos&lt;/name&gt;&lt;programmatic_content&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+
+&lt;g:requires name="jquery.datatables.min.jsdbx" /&gt;
+
+&lt;div class="panel-group" id="accordion"&gt;
+  &lt;div class="panel panel-default"&gt;
+    &lt;div class="panel-heading"&gt;
+      &lt;h4 class="panel-title"&gt;
+        &lt;a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"&gt;
+          My Incidents
+        &lt;/a&gt;
+        &lt;span id="incTotal" class="badge"&gt;&lt;/span&gt;
+      &lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div id="collapseOne" class="panel-collapse collapse in"&gt;
+      &lt;div class="panel-body"&gt;
+        &lt;g:content_block type="content_block_lists" id="2f0a6bf34dd8ad80bc95842eaf535488" /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="panel panel-default"&gt;
+    &lt;div class="panel-heading"&gt;
+      &lt;h4 class="panel-title"&gt;
+        &lt;a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"&gt;
+          My Requests
+        &lt;/a&gt;
+        &lt;span id="reqTotal" class="badge"&gt;&lt;/span&gt;
+      &lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div id="collapseTwo" class="panel-collapse collapse"&gt;
+      &lt;div class="panel-body"&gt;
+
+        &lt;g:content_block type="content_block_lists" id="d093a3ff4d98ad80bc95842eaf535440" /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="panel panel-default"&gt;
+    &lt;div class="panel-heading"&gt;
+      &lt;h4 class="panel-title"&gt;
+        &lt;a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"&gt;
+          My Approvals
+        &lt;/a&gt;
+        &lt;span id="appTotal" class="badge"&gt;&lt;/span&gt;
+      &lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div id="collapseThree" class="panel-collapse collapse"&gt;
+      &lt;div class="panel-body"&gt;
+         &lt;g:content_block type="content_block_lists" id="307e57fb4d98ad80bc95842eaf535429" /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="panel panel-default"&gt;
+    &lt;div class="panel-heading"&gt;
+      &lt;h4 class="panel-title"&gt;
+        &lt;a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"&gt;
+          My Change Requests
+        &lt;/a&gt;
+        &lt;span id="chgTotal" class="badge"&gt;&lt;/span&gt;
+      &lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div id="collapseFour" class="panel-collapse collapse"&gt;
+      &lt;div class="panel-body"&gt;
+         &lt;g:content_block type="content_block_lists" id="5c2b5cc64db8adc0bc95842eaf535436" /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+	&lt;!--
+  &lt;div class="panel panel-default"&gt;
+    &lt;div class="panel-heading"&gt;
+      &lt;h4 class="panel-title"&gt;
+        &lt;a data-toggle="collapse" data-parent="#accordion" href="#collapseFive"&gt;
+          My Other Tasks
+        &lt;/a&gt;
+        &lt;span id="tskTotal" class="badge"&gt;&lt;/span&gt;
+      &lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div id="collapseFive" class="panel-collapse collapse"&gt;
+      &lt;div class="panel-body"&gt;
+         &lt;g:content_block type="content_block_lists" id="13471c064db8adc0bc95842eaf535424" /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+	--&gt;
+&lt;/div&gt;
+
+
+
+&lt;/j:jelly&gt;]]&gt;&lt;/programmatic_content&gt;&lt;sys_class_name&gt;content_block_programmatic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;eric.szonyi_SHARE&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2014-05-20 20:27:21&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;673c5cb14dfc6dc0bc95842eaf535460&lt;/sys_id&gt;&lt;sys_mod_count&gt;43&lt;/sys_mod_count&gt;&lt;sys_name&gt;Sport Dynamic Todos&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;content_block_programmatic_673c5cb14dfc6dc0bc95842eaf535460&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin_SHARE&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2015-05-27 12:58:47&lt;/sys_updated_on&gt;&lt;two_phase&gt;false&lt;/two_phase&gt;&lt;/content_block_programmatic&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Sport CMS 3_16 (Fuji)">2c0b046def1002005b14a42d6a2256f9</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin_SHARE</sys_created_by>
+<sys_created_on>2015-05-27 20:23:55</sys_created_on>
+<sys_id>6c0b046def1002005b14a42d6a2256f9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin_SHARE</sys_updated_by>
+<sys_updated_on>2015-05-27 20:23:55</sys_updated_on>
+<table/>
+<target_name>Sport Dynamic Todos</target_name>
+<type>Dynamic Content</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>content_block_static_cf304a57eb2121006395c63ca206fe19</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="content_block_static"&gt;&lt;content_block_static action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;category&gt;general&lt;/category&gt;&lt;condition/&gt;&lt;conditional&gt;false&lt;/conditional&gt;&lt;frame/&gt;&lt;logged_on&gt;false&lt;/logged_on&gt;&lt;name&gt;Sport Release Notes&lt;/name&gt;&lt;static_content&gt;&lt;![CDATA[&lt;p&gt;&lt;span style="font-size: 12pt;"&gt;&lt;strong&gt;Version 3.16&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt; Fixes&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;General fixes for Fuji&lt;/li&gt;&lt;li&gt;Resolved package call issues in UI macros&lt;/li&gt;&lt;li&gt;Changed tasks to Approvals for Todos for performance issues&lt;/li&gt;&lt;li&gt;Fixed missing DataTables sort icons&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-size: 12pt;"&gt;&lt;strong&gt;Version 3.15&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt; Fixes&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Fixed issue where Add Items anchors and buttons in the Cart redirect to the Frameset UI&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-size: 12pt;"&gt;&lt;strong&gt;Version 3.14&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt; Fixes&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Fixed script errors in sport_cms_header_login UI macro related to &lt;strong&gt;sysparm_login_failed&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;Fixed access issue where ESS user could not display icons&lt;/li&gt;&lt;li&gt;Removed header menu and feedback control for users not logged in&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 12pt;"&gt;&lt;strong&gt;Version 3.13&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt; Fixes&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Fixed script errors in sport_cms_header_login UI macro related to &lt;strong&gt;sysparm_document_key&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;Fixed script errors in &lt;strong&gt;Sport Dynamic Header&lt;/strong&gt; related to &lt;strong&gt;sysparm_is_login&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;Fixed Font Awesome style sheet for IE fix&lt;/li&gt;&lt;li&gt;Fixed broken Continue Shopping button on cart to redirect to main catalog browse page&lt;/li&gt;&lt;li&gt;Fixed Back to Catalog button on checkout screen to redirect to main catalog browse page&lt;/li&gt;&lt;li&gt;Fixed IFrame resize issue in IE10&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-size: 12pt;"&gt;&lt;strong&gt;Version 3.12&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Fixes&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;De-activated default catalog item icon to prevent override of OOB or customer default&lt;/li&gt;&lt;li&gt;Fixed CSS that was causing IFrame height issues and cutting off buttons&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-size: 12pt;"&gt;&lt;strong&gt;Version 3.10&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Fixes&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Fixed issue in IE9 where pages with gsft_main IFrames would wildly resize during mouseover&lt;/li&gt;&lt;li&gt;Fixed issue with dynamic CSS failing when user is not authenticated. Processor added to public pages&lt;/li&gt;&lt;li&gt;Converted FontAwesome font files to attachments from Customer Uploads to address issues with IE8 src in CSS&lt;/li&gt;&lt;li&gt;Fixed issue with dynamic CSS inserting itself into the navigation stack&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-size: 12pt;"&gt;&lt;strong&gt;Version 3.9&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Enhancements&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Added jQuery news scroller functionality&lt;/li&gt;&lt;li&gt;Added new dynamic block for homepage ilnk blocks and news&lt;/li&gt;&lt;li&gt;Enhanced cms_menu macro to allow custom blocks for Navigation Menus&lt;/li&gt;&lt;li&gt;Added second Home page to provide alternate landing page format&lt;/li&gt;&lt;li&gt;Added new property to display a language picker in the header&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;Fixes&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Fixed issue where social icons would not display in the header&lt;/li&gt;&lt;li&gt;Fixed menu block macros to check FontAwesome tags instead of image values&lt;/li&gt;&lt;li&gt;Fixed task content type so it can display a record from any extended table&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-size: 12pt;"&gt;&lt;strong&gt;Version 3.8&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Fixes&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Created UI page to address stack issue with blank page on delete from cart&lt;/li&gt;&lt;li&gt;Converted cart updating functionality to AJAX calls to fix both add and delete issues&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-size: 12pt;"&gt;&lt;strong&gt;Version 3.6&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Enhancements&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Converted Feedback Me plugin to pure CSS3 Feedback control&lt;/li&gt;&lt;li&gt;Applied Bootstrap table style to lists in IFrames&lt;/li&gt;&lt;li&gt;Applied Bootstrap styles to info and error messages in gsft_main IFrames&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;Fixes&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-size: 12pt;"&gt;&lt;strong&gt;Version 3.5&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Enhancements&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Added release notes page&lt;/li&gt;&lt;li&gt;Added Todos links to dynamic style sheet&lt;/li&gt;&lt;li&gt;Applied Bootstrap styles to all select dropdown elements&lt;/li&gt;&lt;li&gt;Renamed properties to include type to facilitate custom properties page&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;Fixes&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Re-located inaccessible Add Content link when editing page&lt;/li&gt;&lt;li&gt;Themed main page and IFrame submit buttons properly&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;Version 3.4&lt;/p&gt;
+&lt;p&gt;Enhancements&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Added Font Awesome capabilities&lt;/li&gt;&lt;li&gt;Converted ALL site icons to font awesome icons&lt;/li&gt;&lt;li&gt;Added Font Awesome tag field to Navigation menus&lt;/li&gt;&lt;/ul&gt;]]&gt;&lt;/static_content&gt;&lt;sys_class_name&gt;content_block_static&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_SHARE&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2014-07-02 02:23:26&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;cf304a57eb2121006395c63ca206fe19&lt;/sys_id&gt;&lt;sys_mod_count&gt;34&lt;/sys_mod_count&gt;&lt;sys_name&gt;Sport Release Notes&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;content_block_static_cf304a57eb2121006395c63ca206fe19&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin_SHARE&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2015-05-27 13:07:43&lt;/sys_updated_on&gt;&lt;/content_block_static&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=cf304a57eb2121006395c63ca206fe19"/&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Sport CMS 3_16 (Fuji)">2c0b046def1002005b14a42d6a2256f9</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin_SHARE</sys_created_by>
+<sys_created_on>2015-05-27 20:23:55</sys_created_on>
+<sys_id>ac0b046def1002005b14a42d6a2256f9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin_SHARE</sys_updated_by>
+<sys_updated_on>2015-05-27 20:23:55</sys_updated_on>
+<table/>
+<target_name>Sport Release Notes</target_name>
+<type>Static Content</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>content_css_9153e48e4db8adc0bc95842eaf535440</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="content_css"><content_css action="INSERT_OR_UPDATE"><name>datatables.css</name><style>table.dataTable{width:100%;margin:0 auto;clear:both;border-collapse:separate;border-spacing:0}table.dataTable thead th,table.dataTable tfoot th{font-weight:bold}table.dataTable thead th,table.dataTable thead td{padding:10px 18px;border-bottom:1px solid #111}table.dataTable thead th:active,table.dataTable thead td:active{outline:none}table.dataTable tfoot th,table.dataTable tfoot td{padding:10px 18px 6px 18px;border-top:1px solid #111}table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting{cursor:pointer;*cursor:hand}table.dataTable thead .sorting{background:url("sort_both.pngx") no-repeat center right}table.dataTable thead .sorting_asc{background:url("sort_asc.pngx") no-repeat center right}table.dataTable thead .sorting_desc{background:url("sort_desc.pngx") no-repeat center right}table.dataTable thead .sorting_asc_disabled{background:url("sort_asc_disabled.pngx") no-repeat center right}table.dataTable thead .sorting_desc_disabled{background:url("sort_desc_disabled.pngx") no-repeat center right}table.dataTable tbody tr{background-color:#fff}table.dataTable tbody tr.selected{background-color:#b0bed9}table.dataTable tbody th,table.dataTable tbody td{padding:8px 10px}table.dataTable th.center,table.dataTable td.center,table.dataTable td.dataTables_empty{text-align:center}table.dataTable th.right,table.dataTable td.right{text-align:right}table.dataTable.row-border tbody th,table.dataTable.row-border tbody td,table.dataTable.display tbody th,table.dataTable.display tbody td{border-top:1px solid #ddd}table.dataTable.row-border tbody tr:first-child th,table.dataTable.row-border tbody tr:first-child td,table.dataTable.display tbody tr:first-child th,table.dataTable.display tbody tr:first-child td{border-top:none}table.dataTable.cell-border tbody th,table.dataTable.cell-border tbody td{border-top:1px solid #ddd;border-right:1px solid #ddd}table.dataTable.cell-border tbody tr th:first-child,table.dataTable.cell-border tbody tr td:first-child{border-left:1px solid #ddd}table.dataTable.cell-border tbody tr:first-child th,table.dataTable.cell-border tbody tr:first-child td{border-top:none}table.dataTable.stripe tbody tr.odd,table.dataTable.display tbody tr.odd{background-color:#f9f9f9}table.dataTable.stripe tbody tr.odd.selected,table.dataTable.display tbody tr.odd.selected{background-color:#abb9d3}table.dataTable.hover tbody tr:hover,table.dataTable.hover tbody tr.odd:hover,table.dataTable.hover tbody tr.even:hover,table.dataTable.display tbody tr:hover,table.dataTable.display tbody tr.odd:hover,table.dataTable.display tbody tr.even:hover{background-color:#f5f5f5}table.dataTable.hover tbody tr:hover.selected,table.dataTable.hover tbody tr.odd:hover.selected,table.dataTable.hover tbody tr.even:hover.selected,table.dataTable.display tbody tr:hover.selected,table.dataTable.display tbody tr.odd:hover.selected,table.dataTable.display tbody tr.even:hover.selected{background-color:#a9b7d1}table.dataTable.order-column tbody tr&gt;.sorting_1,table.dataTable.order-column tbody tr&gt;.sorting_2,table.dataTable.order-column tbody tr&gt;.sorting_3,table.dataTable.display tbody tr&gt;.sorting_1,table.dataTable.display tbody tr&gt;.sorting_2,table.dataTable.display tbody tr&gt;.sorting_3{background-color:#f9f9f9}table.dataTable.order-column tbody tr.selected&gt;.sorting_1,table.dataTable.order-column tbody tr.selected&gt;.sorting_2,table.dataTable.order-column tbody tr.selected&gt;.sorting_3,table.dataTable.display tbody tr.selected&gt;.sorting_1,table.dataTable.display tbody tr.selected&gt;.sorting_2,table.dataTable.display tbody tr.selected&gt;.sorting_3{background-color:#acbad4}table.dataTable.display tbody tr.odd&gt;.sorting_1,table.dataTable.order-column.stripe tbody tr.odd&gt;.sorting_1{background-color:#f1f1f1}table.dataTable.display tbody tr.odd&gt;.sorting_2,table.dataTable.order-column.stripe tbody tr.odd&gt;.sorting_2{background-color:#f3f3f3}table.dataTable.display tbody tr.odd&gt;.sorting_3,table.dataTable.order-column.stripe tbody tr.odd&gt;.sorting_3{background-color:#f5f5f5}table.dataTable.display tbody tr.odd.selected&gt;.sorting_1,table.dataTable.order-column.stripe tbody tr.odd.selected&gt;.sorting_1{background-color:#a6b3cd}table.dataTable.display tbody tr.odd.selected&gt;.sorting_2,table.dataTable.order-column.stripe tbody tr.odd.selected&gt;.sorting_2{background-color:#a7b5ce}table.dataTable.display tbody tr.odd.selected&gt;.sorting_3,table.dataTable.order-column.stripe tbody tr.odd.selected&gt;.sorting_3{background-color:#a9b6d0}table.dataTable.display tbody tr.even&gt;.sorting_1,table.dataTable.order-column.stripe tbody tr.even&gt;.sorting_1{background-color:#f9f9f9}table.dataTable.display tbody tr.even&gt;.sorting_2,table.dataTable.order-column.stripe tbody tr.even&gt;.sorting_2{background-color:#fbfbfb}table.dataTable.display tbody tr.even&gt;.sorting_3,table.dataTable.order-column.stripe tbody tr.even&gt;.sorting_3{background-color:#fdfdfd}table.dataTable.display tbody tr.even.selected&gt;.sorting_1,table.dataTable.order-column.stripe tbody tr.even.selected&gt;.sorting_1{background-color:#acbad4}table.dataTable.display tbody tr.even.selected&gt;.sorting_2,table.dataTable.order-column.stripe tbody tr.even.selected&gt;.sorting_2{background-color:#adbbd6}table.dataTable.display tbody tr.even.selected&gt;.sorting_3,table.dataTable.order-column.stripe tbody tr.even.selected&gt;.sorting_3{background-color:#afbdd8}table.dataTable.display tbody tr:hover&gt;.sorting_1,table.dataTable.display tbody tr.odd:hover&gt;.sorting_1,table.dataTable.display tbody tr.even:hover&gt;.sorting_1,table.dataTable.order-column.hover tbody tr:hover&gt;.sorting_1,table.dataTable.order-column.hover tbody tr.odd:hover&gt;.sorting_1,table.dataTable.order-column.hover tbody tr.even:hover&gt;.sorting_1{background-color:#eaeaea}table.dataTable.display tbody tr:hover&gt;.sorting_2,table.dataTable.display tbody tr.odd:hover&gt;.sorting_2,table.dataTable.display tbody tr.even:hover&gt;.sorting_2,table.dataTable.order-column.hover tbody tr:hover&gt;.sorting_2,table.dataTable.order-column.hover tbody tr.odd:hover&gt;.sorting_2,table.dataTable.order-column.hover tbody tr.even:hover&gt;.sorting_2{background-color:#ebebeb}table.dataTable.display tbody tr:hover&gt;.sorting_3,table.dataTable.display tbody tr.odd:hover&gt;.sorting_3,table.dataTable.display tbody tr.even:hover&gt;.sorting_3,table.dataTable.order-column.hover tbody tr:hover&gt;.sorting_3,table.dataTable.order-column.hover tbody tr.odd:hover&gt;.sorting_3,table.dataTable.order-column.hover tbody tr.even:hover&gt;.sorting_3{background-color:#eee}table.dataTable.display tbody tr:hover.selected&gt;.sorting_1,table.dataTable.display tbody tr.odd:hover.selected&gt;.sorting_1,table.dataTable.display tbody tr.even:hover.selected&gt;.sorting_1,table.dataTable.order-column.hover tbody tr:hover.selected&gt;.sorting_1,table.dataTable.order-column.hover tbody tr.odd:hover.selected&gt;.sorting_1,table.dataTable.order-column.hover tbody tr.even:hover.selected&gt;.sorting_1{background-color:#a1aec7}table.dataTable.display tbody tr:hover.selected&gt;.sorting_2,table.dataTable.display tbody tr.odd:hover.selected&gt;.sorting_2,table.dataTable.display tbody tr.even:hover.selected&gt;.sorting_2,table.dataTable.order-column.hover tbody tr:hover.selected&gt;.sorting_2,table.dataTable.order-column.hover tbody tr.odd:hover.selected&gt;.sorting_2,table.dataTable.order-column.hover tbody tr.even:hover.selected&gt;.sorting_2{background-color:#a2afc8}table.dataTable.display tbody tr:hover.selected&gt;.sorting_3,table.dataTable.display tbody tr.odd:hover.selected&gt;.sorting_3,table.dataTable.display tbody tr.even:hover.selected&gt;.sorting_3,table.dataTable.order-column.hover tbody tr:hover.selected&gt;.sorting_3,table.dataTable.order-column.hover tbody tr.odd:hover.selected&gt;.sorting_3,table.dataTable.order-column.hover tbody tr.even:hover.selected&gt;.sorting_3{background-color:#a4b2cb}table.dataTable.no-footer{border-bottom:1px solid #111}table.dataTable,table.dataTable th,table.dataTable td{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}.dataTables_wrapper{position:relative;clear:both;*zoom:1;zoom:1}.dataTables_wrapper .dataTables_length{float:left}.dataTables_wrapper .dataTables_filter{float:right;text-align:right}.dataTables_wrapper .dataTables_filter input{margin-left:0.5em}.dataTables_wrapper .dataTables_info{clear:both;float:left;padding-top:0.755em}.dataTables_wrapper .dataTables_paginate{float:right;text-align:right;padding-top:0.25em}.dataTables_wrapper .dataTables_paginate .paginate_button{box-sizing:border-box;display:inline-block;min-width:1.5em;padding:0.5em 1em;margin-left:2px;text-align:center;text-decoration:none !important;cursor:pointer;*cursor:hand;color:#333 !important;border:1px solid transparent}.dataTables_wrapper .dataTables_paginate .paginate_button.current,.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover{color:#333 !important;border:1px solid #cacaca;background-color:#fff;background:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #dcdcdc));background:-webkit-linear-gradient(top, #fff 0%, #dcdcdc 100%);background:-moz-linear-gradient(top, #fff 0%, #dcdcdc 100%);background:-ms-linear-gradient(top, #fff 0%, #dcdcdc 100%);background:-o-linear-gradient(top, #fff 0%, #dcdcdc 100%);background:linear-gradient(to bottom, #fff 0%, #dcdcdc 100%)}.dataTables_wrapper .dataTables_paginate .paginate_button.disabled,.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active{cursor:default;color:#666 !important;border:1px solid transparent;background:transparent;box-shadow:none}.dataTables_wrapper .dataTables_paginate .paginate_button:hover{color:white !important;border:1px solid #111;background-color:#585858;background:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #585858), color-stop(100%, #111));background:-webkit-linear-gradient(top, #585858 0%, #111 100%);background:-moz-linear-gradient(top, #585858 0%, #111 100%);background:-ms-linear-gradient(top, #585858 0%, #111 100%);background:-o-linear-gradient(top, #585858 0%, #111 100%);background:linear-gradient(to bottom, #585858 0%, #111 100%)}.dataTables_wrapper .dataTables_paginate .paginate_button:active{outline:none;background-color:#2b2b2b;background:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #2b2b2b), color-stop(100%, #0c0c0c));background:-webkit-linear-gradient(top, #2b2b2b 0%, #0c0c0c 100%);background:-moz-linear-gradient(top, #2b2b2b 0%, #0c0c0c 100%);background:-ms-linear-gradient(top, #2b2b2b 0%, #0c0c0c 100%);background:-o-linear-gradient(top, #2b2b2b 0%, #0c0c0c 100%);background:linear-gradient(to bottom, #2b2b2b 0%, #0c0c0c 100%);box-shadow:inset 0 0 3px #111}.dataTables_wrapper .dataTables_processing{position:absolute;top:50%;left:50%;width:100%;height:40px;margin-left:-50%;margin-top:-25px;padding-top:20px;text-align:center;font-size:1.2em;background-color:white;background:-webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255,255,255,0)), color-stop(25%, rgba(255,255,255,0.9)), color-stop(75%, rgba(255,255,255,0.9)), color-stop(100%, rgba(255,255,255,0)));background:-webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 25%, rgba(255,255,255,0.9) 75%, rgba(255,255,255,0) 100%);background:-moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 25%, rgba(255,255,255,0.9) 75%, rgba(255,255,255,0) 100%);background:-ms-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 25%, rgba(255,255,255,0.9) 75%, rgba(255,255,255,0) 100%);background:-o-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 25%, rgba(255,255,255,0.9) 75%, rgba(255,255,255,0) 100%);background:linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 25%, rgba(255,255,255,0.9) 75%, rgba(255,255,255,0) 100%)}.dataTables_wrapper .dataTables_length,.dataTables_wrapper .dataTables_filter,.dataTables_wrapper .dataTables_info,.dataTables_wrapper .dataTables_processing,.dataTables_wrapper .dataTables_paginate{color:#333}.dataTables_wrapper .dataTables_scroll{clear:both}.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody{*margin-top:-1px;-webkit-overflow-scrolling:touch}.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody th&gt;div.dataTables_sizing,.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody td&gt;div.dataTables_sizing{height:0;overflow:hidden;margin:0 !important;padding:0 !important}.dataTables_wrapper.no-footer .dataTables_scrollBody{border-bottom:1px solid #111}.dataTables_wrapper.no-footer div.dataTables_scrollHead table,.dataTables_wrapper.no-footer div.dataTables_scrollBody table{border-bottom:none}.dataTables_wrapper:after{visibility:hidden;display:block;content:"";clear:both;height:0}@media screen and (max-width: 767px){.dataTables_wrapper .dataTables_info,.dataTables_wrapper .dataTables_paginate{float:none;text-align:center}.dataTables_wrapper .dataTables_paginate{margin-top:0.5em}}@media screen and (max-width: 640px){.dataTables_wrapper .dataTables_length,.dataTables_wrapper .dataTables_filter{float:none;text-align:center}.dataTables_wrapper .dataTables_filter{margin-top:0.5em}}&#13;
+</style><sys_class_name>content_css</sys_class_name><sys_created_by>eric.szonyi_SHARE</sys_created_by><sys_created_on>2014-05-21 15:36:23</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>9153e48e4db8adc0bc95842eaf535440</sys_id><sys_mod_count>1</sys_mod_count><sys_name>datatables.css</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Global">global</sys_scope><sys_update_name>content_css_9153e48e4db8adc0bc95842eaf535440</sys_update_name><sys_updated_by>admin_SHARE</sys_updated_by><sys_updated_on>2015-05-27 13:06:37</sys_updated_on><type>local</type><url/></content_css></record_update>]]></payload>
+<remote_update_set display_value="Sport CMS 3_16 (Fuji)">2c0b046def1002005b14a42d6a2256f9</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin_SHARE</sys_created_by>
+<sys_created_on>2015-05-27 20:23:55</sys_created_on>
+<sys_id>ec0b046def1002005b14a42d6a2256f9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin_SHARE</sys_updated_by>
+<sys_updated_on>2015-05-27 20:23:55</sys_updated_on>
+<table/>
+<target_name>datatables.css</target_name>
+<type>Style Sheet</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>db_image_22a66259ef1002005b14a42d6a2256cd</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image"><db_image action="INSERT_OR_UPDATE"><active>true</active><category/><format>png</format><height>19</height><image/><name>sort_asc.png</name><size_bytes>160</size_bytes><sys_class_name>db_image</sys_class_name><sys_created_by>admin_SHARE</sys_created_by><sys_created_on>2015-05-27 13:05:31</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>22a66259ef1002005b14a42d6a2256cd</sys_id><sys_mod_count>1</sys_mod_count><sys_name>sort_asc.png</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Global">global</sys_scope><sys_update_name>db_image_22a66259ef1002005b14a42d6a2256cd</sys_update_name><sys_updated_by>admin_SHARE</sys_updated_by><sys_updated_on>2015-05-27 13:05:32</sys_updated_on><thumbnail/><width>19</width></db_image><sys_attachment action="INSERT_OR_UPDATE"><compressed>true</compressed><content_type>image/png</content_type><file_name>image</file_name><size_bytes>160</size_bytes><size_compressed>176</size_compressed><sys_created_by>admin_SHARE</sys_created_by><sys_created_on>2015-05-27 13:05:31</sys_created_on><sys_id>b6a66259ef1002005b14a42d6a2256cd</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin_SHARE</sys_updated_by><sys_updated_on>2015-05-27 13:05:31</sys_updated_on><table_name>ZZ_YYdb_image</table_name><table_sys_id>22a66259ef1002005b14a42d6a2256cd</table_sys_id></sys_attachment><sys_attachment_doc action="INSERT_OR_UPDATE"><data>H4sIAAAAAAAAAA==</data><length>16</length><position>0</position><sys_attachment display_value="image" sys_id="b6a66259ef1002005b14a42d6a2256cd">b6a66259ef1002005b14a42d6a2256cd</sys_attachment><sys_created_by>admin_SHARE</sys_created_by><sys_created_on>2015-05-27 13:05:31</sys_created_on><sys_id>f6a66259ef1002005b14a42d6a2256cd</sys_id></sys_attachment_doc><sys_attachment_doc action="INSERT_OR_UPDATE"><data>6wzwc+flkuJiYGDg9fRwCQLSwiDMwQYkiwLMzgCpdE8XxxCL08kJEpsWrHqoJy7gz5BkliURxnVkf4PF7KDmLQ0/DAX+sz+67bDGZ51jj4ONeJYAjz9L5+TkGcoC+52N3wgL3J6QJaAv8N7ZmKOtnMHQWrNNlemjv8K/PtbmI8qSbgc1JFgzGBjuVeXo2h7zuA20ksHT1c9lnVNCEwBe5olRoAAAAA==</data><length>224</length><position>1</position><sys_attachment display_value="image" sys_id="b6a66259ef1002005b14a42d6a2256cd">b6a66259ef1002005b14a42d6a2256cd</sys_attachment><sys_created_by>admin_SHARE</sys_created_by><sys_created_on>2015-05-27 13:05:31</sys_created_on><sys_id>3aa66259ef1002005b14a42d6a2256cd</sys_id></sys_attachment_doc></record_update>]]></payload>
+<remote_update_set display_value="Sport CMS 3_16 (Fuji)">2c0b046def1002005b14a42d6a2256f9</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin_SHARE</sys_created_by>
+<sys_created_on>2015-05-27 20:23:55</sys_created_on>
+<sys_id>200b046def1002005b14a42d6a2256fa</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin_SHARE</sys_updated_by>
+<sys_updated_on>2015-05-27 20:23:55</sys_updated_on>
+<table/>
+<target_name>sort_asc.png</target_name>
+<type>Images</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>db_image_32a66259ef1002005b14a42d6a2256ce</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image"><db_image action="INSERT_OR_UPDATE"><active>true</active><category/><format>png</format><height>19</height><image/><name>sort_asc_disabled.png</name><size_bytes>148</size_bytes><sys_class_name>db_image</sys_class_name><sys_created_by>admin_SHARE</sys_created_by><sys_created_on>2015-05-27 13:05:32</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>32a66259ef1002005b14a42d6a2256ce</sys_id><sys_mod_count>1</sys_mod_count><sys_name>sort_asc_disabled.png</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Global">global</sys_scope><sys_update_name>db_image_32a66259ef1002005b14a42d6a2256ce</sys_update_name><sys_updated_by>admin_SHARE</sys_updated_by><sys_updated_on>2015-05-27 13:05:32</sys_updated_on><thumbnail/><width>19</width></db_image><sys_attachment action="INSERT_OR_UPDATE"><compressed>true</compressed><content_type>image/png</content_type><file_name>image</file_name><size_bytes>148</size_bytes><size_compressed>163</size_compressed><sys_created_by>admin_SHARE</sys_created_by><sys_created_on>2015-05-27 13:05:32</sys_created_on><sys_id>b6a66259ef1002005b14a42d6a2256ce</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin_SHARE</sys_updated_by><sys_updated_on>2015-05-27 13:05:32</sys_updated_on><table_name>ZZ_YYdb_image</table_name><table_sys_id>32a66259ef1002005b14a42d6a2256ce</table_sys_id></sys_attachment><sys_attachment_doc action="INSERT_OR_UPDATE"><data>H4sIAAAAAAAAAA==</data><length>16</length><position>0</position><sys_attachment display_value="image" sys_id="b6a66259ef1002005b14a42d6a2256ce">b6a66259ef1002005b14a42d6a2256ce</sys_attachment><sys_created_by>admin_SHARE</sys_created_by><sys_created_on>2015-05-27 13:05:32</sys_created_on><sys_id>f6a66259ef1002005b14a42d6a2256ce</sys_id></sys_attachment_doc><sys_attachment_doc action="INSERT_OR_UPDATE"><data>6wzwc+flkuJiYGDg9fRwCQLSwiDMwQIkb0T+cwdS0Z4ujiEa55MTFmjuOFyafkjW7NApr/d/dk329Zh4be7x8n/3d9a6S85XOmZd3NjlUPBI1u3OKZn3e5q1fpccZ5uudM/69wKg8HHZsjenhN7/2fNZlq/+XmeKBGsz0Nbtp5xYdrZwguxl8HT1c1nnlNAEAB0BSaeUAAAA</data><length>204</length><position>1</position><sys_attachment display_value="image" sys_id="b6a66259ef1002005b14a42d6a2256ce">b6a66259ef1002005b14a42d6a2256ce</sys_attachment><sys_created_by>admin_SHARE</sys_created_by><sys_created_on>2015-05-27 13:05:32</sys_created_on><sys_id>3aa66259ef1002005b14a42d6a2256ce</sys_id></sys_attachment_doc></record_update>]]></payload>
+<remote_update_set display_value="Sport CMS 3_16 (Fuji)">2c0b046def1002005b14a42d6a2256f9</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin_SHARE</sys_created_by>
+<sys_created_on>2015-05-27 20:23:55</sys_created_on>
+<sys_id>600b046def1002005b14a42d6a2256fa</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin_SHARE</sys_updated_by>
+<sys_updated_on>2015-05-27 20:23:55</sys_updated_on>
+<table/>
+<target_name>sort_asc_disabled.png</target_name>
+<type>Images</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>db_image_4fa66259ef1002005b14a42d6a2256d0</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image"><db_image action="INSERT_OR_UPDATE"><active>true</active><category/><format>png</format><height>19</height><image/><name>sort_desc_disabled.png</name><size_bytes>146</size_bytes><sys_class_name>db_image</sys_class_name><sys_created_by>admin_SHARE</sys_created_by><sys_created_on>2015-05-27 13:05:32</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>4fa66259ef1002005b14a42d6a2256d0</sys_id><sys_mod_count>1</sys_mod_count><sys_name>sort_desc_disabled.png</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Global">global</sys_scope><sys_update_name>db_image_4fa66259ef1002005b14a42d6a2256d0</sys_update_name><sys_updated_by>admin_SHARE</sys_updated_by><sys_updated_on>2015-05-27 13:05:32</sys_updated_on><thumbnail/><width>19</width></db_image><sys_attachment action="INSERT_OR_UPDATE"><compressed>true</compressed><content_type>image/png</content_type><file_name>image</file_name><size_bytes>146</size_bytes><size_compressed>163</size_compressed><sys_created_by>admin_SHARE</sys_created_by><sys_created_on>2015-05-27 13:05:32</sys_created_on><sys_id>c3a66259ef1002005b14a42d6a2256d1</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin_SHARE</sys_updated_by><sys_updated_on>2015-05-27 13:05:32</sys_updated_on><table_name>ZZ_YYdb_image</table_name><table_sys_id>4fa66259ef1002005b14a42d6a2256d0</table_sys_id></sys_attachment><sys_attachment_doc action="INSERT_OR_UPDATE"><data>H4sIAAAAAAAAAA==</data><length>16</length><position>0</position><sys_attachment display_value="image" sys_id="c3a66259ef1002005b14a42d6a2256d1">c3a66259ef1002005b14a42d6a2256d1</sys_attachment><sys_created_by>admin_SHARE</sys_created_by><sys_created_on>2015-05-27 13:05:32</sys_created_on><sys_id>07a66259ef1002005b14a42d6a2256d1</sys_id></sys_attachment_doc><sys_attachment_doc action="INSERT_OR_UPDATE"><data>6wzwc+flkuJiYGDg9fRwCQLSwiDMwQIkb0T+cwdSkZ4ujiEa55MTJFibue507vn8+Vy5xZ9KdcHdRt+srd/9aT9cW15RODO9+LlwyMXd1n071qbuMRZclfNO1q3mXfC+YukVLz7K6jrJndz3+bWfZuL/TXdnFrR3b0vkYije5sRS+KNPA2gJg6ern8s6p4QmAPM34pKSAAAA</data><length>204</length><position>1</position><sys_attachment display_value="image" sys_id="c3a66259ef1002005b14a42d6a2256d1">c3a66259ef1002005b14a42d6a2256d1</sys_attachment><sys_created_by>admin_SHARE</sys_created_by><sys_created_on>2015-05-27 13:05:32</sys_created_on><sys_id>47a66259ef1002005b14a42d6a2256d1</sys_id></sys_attachment_doc></record_update>]]></payload>
+<remote_update_set display_value="Sport CMS 3_16 (Fuji)">2c0b046def1002005b14a42d6a2256f9</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin_SHARE</sys_created_by>
+<sys_created_on>2015-05-27 20:23:55</sys_created_on>
+<sys_id>a00b046def1002005b14a42d6a2256fa</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin_SHARE</sys_updated_by>
+<sys_updated_on>2015-05-27 20:23:55</sys_updated_on>
+<table/>
+<target_name>sort_desc_disabled.png</target_name>
+<type>Images</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>db_image_8fa66259ef1002005b14a42d6a2256cf</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image"><db_image action="INSERT_OR_UPDATE"><active>true</active><category/><format>png</format><height>19</height><image/><name>sort_desc.png</name><size_bytes>158</size_bytes><sys_class_name>db_image</sys_class_name><sys_created_by>admin_SHARE</sys_created_by><sys_created_on>2015-05-27 13:05:32</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>8fa66259ef1002005b14a42d6a2256cf</sys_id><sys_mod_count>1</sys_mod_count><sys_name>sort_desc.png</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Global">global</sys_scope><sys_update_name>db_image_8fa66259ef1002005b14a42d6a2256cf</sys_update_name><sys_updated_by>admin_SHARE</sys_updated_by><sys_updated_on>2015-05-27 13:05:32</sys_updated_on><thumbnail/><width>19</width></db_image><sys_attachment action="INSERT_OR_UPDATE"><compressed>true</compressed><content_type>image/png</content_type><file_name>image</file_name><size_bytes>158</size_bytes><size_compressed>176</size_compressed><sys_created_by>admin_SHARE</sys_created_by><sys_created_on>2015-05-27 13:05:32</sys_created_on><sys_id>07a66259ef1002005b14a42d6a2256d0</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin_SHARE</sys_updated_by><sys_updated_on>2015-05-27 13:05:32</sys_updated_on><table_name>ZZ_YYdb_image</table_name><table_sys_id>8fa66259ef1002005b14a42d6a2256cf</table_sys_id></sys_attachment><sys_attachment_doc action="INSERT_OR_UPDATE"><data>H4sIAAAAAAAAAA==</data><length>16</length><position>0</position><sys_attachment display_value="image" sys_id="07a66259ef1002005b14a42d6a2256d0">07a66259ef1002005b14a42d6a2256d0</sys_attachment><sys_created_by>admin_SHARE</sys_created_by><sys_created_on>2015-05-27 13:05:32</sys_created_on><sys_id>47a66259ef1002005b14a42d6a2256d0</sys_id></sys_attachment_doc><sys_attachment_doc action="INSERT_OR_UPDATE"><data>6wzwc+flkuJiYGDg9fRwCQLSwiDMwQYkiwLMzgCpVE8XxxCL08kJEqyLE0QWNK5q2z3R4Y9wx/7kgwofXYJ4ktkfyTr8kee+x35kz5Jd59g67BdKfuHrkD35UUtZwN/FOEfPY86dDcFsj24HNMsxbxRbOnEi75H9DTumSBmeZjsi3DAj+8Uyf4Zw2xzdGQoXdwMtZPB09XNZ55TQBADkXGnlngAAAA==</data><length>224</length><position>1</position><sys_attachment display_value="image" sys_id="07a66259ef1002005b14a42d6a2256d0">07a66259ef1002005b14a42d6a2256d0</sys_attachment><sys_created_by>admin_SHARE</sys_created_by><sys_created_on>2015-05-27 13:05:32</sys_created_on><sys_id>87a66259ef1002005b14a42d6a2256d0</sys_id></sys_attachment_doc></record_update>]]></payload>
+<remote_update_set display_value="Sport CMS 3_16 (Fuji)">2c0b046def1002005b14a42d6a2256f9</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin_SHARE</sys_created_by>
+<sys_created_on>2015-05-27 20:23:55</sys_created_on>
+<sys_id>e00b046def1002005b14a42d6a2256fa</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin_SHARE</sys_updated_by>
+<sys_updated_on>2015-05-27 20:23:55</sys_updated_on>
+<table/>
+<target_name>sort_desc.png</target_name>
+<type>Images</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>db_image_cfa66259ef1002005b14a42d6a2256ce</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image"><db_image action="INSERT_OR_UPDATE"><active>true</active><category/><format>png</format><height>19</height><image/><name>sort_both.png</name><size_bytes>201</size_bytes><sys_class_name>db_image</sys_class_name><sys_created_by>admin_SHARE</sys_created_by><sys_created_on>2015-05-27 13:05:32</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>cfa66259ef1002005b14a42d6a2256ce</sys_id><sys_mod_count>1</sys_mod_count><sys_name>sort_both.png</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Global">global</sys_scope><sys_update_name>db_image_cfa66259ef1002005b14a42d6a2256ce</sys_update_name><sys_updated_by>admin_SHARE</sys_updated_by><sys_updated_on>2015-05-27 13:05:32</sys_updated_on><thumbnail/><width>19</width></db_image><sys_attachment action="INSERT_OR_UPDATE"><compressed>true</compressed><content_type>image/png</content_type><file_name>image</file_name><size_bytes>201</size_bytes><size_compressed>221</size_compressed><sys_created_by>admin_SHARE</sys_created_by><sys_created_on>2015-05-27 13:05:32</sys_created_on><sys_id>47a66259ef1002005b14a42d6a2256cf</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin_SHARE</sys_updated_by><sys_updated_on>2015-05-27 13:05:32</sys_updated_on><table_name>ZZ_YYdb_image</table_name><table_sys_id>cfa66259ef1002005b14a42d6a2256ce</table_sys_id></sys_attachment><sys_attachment_doc action="INSERT_OR_UPDATE"><data>H4sIAAAAAAAAAA==</data><length>16</length><position>0</position><sys_attachment display_value="image" sys_id="47a66259ef1002005b14a42d6a2256cf">47a66259ef1002005b14a42d6a2256cf</sys_attachment><sys_created_by>admin_SHARE</sys_created_by><sys_created_on>2015-05-27 13:05:32</sys_created_on><sys_id>87a66259ef1002005b14a42d6a2256cf</sys_id></sys_attachment_doc><sys_attachment_doc action="INSERT_OR_UPDATE"><data>6wzwc+flkuJiYGDg9fRwCQLSwiDMwQIkb0T+cwdSEzxdHEM0zm+9YMjn4CDQ+vDqBI85Ts95pI4HrLr67iDjHeenSv/81l/gOJthppRUzmV4ua5yZuWxP1ZHtrRYZVusMJ1iqOyzxE7kgjKHk/uDNNbuVO2d3Ko9YpyHHL6c0yrbll1+yr93av+WV3NdebbfdhMKjzuXddHp4eu1m9d8/5LGoyl8yGeZbVDxhRf/27YciZe6/JxFY1ULe6ddphbQbQyern4u65wSmgChC+n+yQAAAA==</data><length>284</length><position>1</position><sys_attachment display_value="image" sys_id="47a66259ef1002005b14a42d6a2256cf">47a66259ef1002005b14a42d6a2256cf</sys_attachment><sys_created_by>admin_SHARE</sys_created_by><sys_created_on>2015-05-27 13:05:32</sys_created_on><sys_id>c7a66259ef1002005b14a42d6a2256cf</sys_id></sys_attachment_doc></record_update>]]></payload>
+<remote_update_set display_value="Sport CMS 3_16 (Fuji)">2c0b046def1002005b14a42d6a2256f9</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin_SHARE</sys_created_by>
+<sys_created_on>2015-05-27 20:23:55</sys_created_on>
+<sys_id>240b046def1002005b14a42d6a2256fa</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin_SHARE</sys_updated_by>
+<sys_updated_on>2015-05-27 20:23:55</sys_updated_on>
+<table/>
+<target_name>sort_both.png</target_name>
+<type>Images</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_f4148c2def1002005b14a42d6a225689</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description/><ignore_cache>false</ignore_cache><is_private>false</is_private><name>glide.ui.heisenberg.exclude</name><read_roles/><suffix/><sys_class_name>sys_properties</sys_class_name><sys_created_by>admin_SHARE</sys_created_by><sys_created_on>2015-05-27 19:53:48</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>f4148c2def1002005b14a42d6a225689</sys_id><sys_mod_count>0</sys_mod_count><sys_name>glide.ui.heisenberg.exclude</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_properties_f4148c2def1002005b14a42d6a225689</sys_update_name><sys_updated_by>admin_SHARE</sys_updated_by><sys_updated_on>2015-05-27 19:53:48</sys_updated_on><type>string</type><value>view_content</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=f4148c2def1002005b14a42d6a225689"/></record_update>]]></payload>
+<remote_update_set display_value="Sport CMS 3_16 (Fuji)">2c0b046def1002005b14a42d6a2256f9</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin_SHARE</sys_created_by>
+<sys_created_on>2015-05-27 20:23:55</sys_created_on>
+<sys_id>640b046def1002005b14a42d6a2256fa</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin_SHARE</sys_updated_by>
+<sys_updated_on>2015-05-27 20:23:55</sys_updated_on>
+<table/>
+<target_name>glide.ui.heisenberg.exclude</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_macro_12d0ded84de8ed80bc95842eaf53541d</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_macro"&gt;&lt;sys_ui_macro action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;category&gt;layout&lt;/category&gt;&lt;description/&gt;&lt;media_type/&gt;&lt;name&gt;Sport Layout Carousel&lt;/name&gt;&lt;scoped_name/&gt;&lt;sys_class_name&gt;sys_ui_macro&lt;/sys_class_name&gt;&lt;sys_created_by&gt;eric.szonyi_SHARE&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2014-05-04 02:49:40&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;12d0ded84de8ed80bc95842eaf53541d&lt;/sys_id&gt;&lt;sys_mod_count&gt;190&lt;/sys_mod_count&gt;&lt;sys_name&gt;Sport Layout Carousel&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_macro_12d0ded84de8ed80bc95842eaf53541d&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin_SHARE&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2015-05-27 18:45:40&lt;/sys_updated_on&gt;&lt;xml&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+    
+    &lt;link type="text/css" rel="stylesheet" href="sportdynamiccss.do?name=sport.dynamic.css$[AMP]sysparm_stack=no"&gt;&lt;/link&gt;
+  
+    &lt;div id="${jvar_name}"&gt;
+        &lt;g:content_block type="content_block_programmatic" id="5f78930a4d09a904bc95842eaf5354c1" /&gt;
+
+        &lt;div style="height:100px;" class="visible-xs"&gt;&lt;/div&gt;
+
+        &lt;div id="myCarousel" class="carousel slide hidden-xs" data-ride="carousel"&gt;
+            &lt;!-- Indicators --&gt;
+            &lt;ol class="carousel-indicators"&gt;
+                &lt;li data-target="#myCarousel" data-slide-to="0" class="active"&gt;&lt;/li&gt;
+                &lt;li data-target="#myCarousel" data-slide-to="1"&gt;&lt;/li&gt;
+                &lt;li data-target="#myCarousel" data-slide-to="2"&gt;&lt;/li&gt;
+            &lt;/ol&gt;
+            &lt;div class="carousel-inner"&gt;
+                &lt;div class="item active"&gt;
+                    &lt;img src="carousel2.jpgx" /&gt;
+                    &lt;div class="container"&gt;
+                        &lt;div class="carousel-caption"&gt;
+                          &lt;h1&gt;Sport Template&lt;/h1&gt;
+                          &lt;p&gt;Place tagline here. Something about Service Relationship Management&lt;/p&gt;
+                          &lt;p&gt;&lt;a class="btn btn-lg btn-primary" href="#" role="button"&gt;Get Help&lt;/a&gt;&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="item"&gt;
+                    &lt;img src="carousel1.jpgx" /&gt;
+                    &lt;div class="container"&gt;
+                        &lt;div class="carousel-caption"&gt;
+                          &lt;h1&gt;Sport Template&lt;/h1&gt;
+                          &lt;p&gt;Place tagline here. Something about Service Relationship Management&lt;/p&gt;
+                          &lt;p&gt;&lt;a class="btn btn-lg btn-primary" href="#" role="button"&gt;Get Help&lt;/a&gt;&lt;/p&gt;                          
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="item"&gt;
+                    &lt;img src="carousel0.jpgx" /&gt;
+                    &lt;div class="container"&gt;
+                        &lt;div class="carousel-caption"&gt;
+                          &lt;h1&gt;Sport Template&lt;/h1&gt;
+                          &lt;p&gt;Place tagline here. Something about Service Relationship Management&lt;/p&gt;
+                          &lt;p&gt;&lt;a class="btn btn-lg btn-primary" href="#" role="button"&gt;Get Help&lt;/a&gt;&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;a class="left carousel-control" href="#myCarousel" data-slide="prev"&gt;
+                &lt;i class="fa fa-chevron-left fa-2x carousel-chevron"&gt;&lt;/i&gt;
+            &lt;/a&gt;
+            &lt;a class="right carousel-control" href="#myCarousel" data-slide="next"&gt;
+                &lt;i class="fa fa-chevron-right fa-2x carousel-chevron"&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;&lt;!-- /.carousel --&gt;
+
+
+        &lt;!-- Wrap the rest of the page in another container to center all the content. --&gt;
+        &lt;div class="container"&gt;
+            &lt;!-- Three columns of text below the carousel --&gt;
+            &lt;div class="row"&gt;
+                &lt;div id="dropzone30" dropzone="true" /&gt;
+            &lt;/div&gt;
+            &lt;!-- /.row --&gt;
+            &lt;!-- FOOTER --&gt;
+
+
+            &lt;g:content_block type="content_block_programmatic" id="4fd57ba27999e940f110a6fa63ddf1b6" /&gt;
+        &lt;/div&gt;
+        &lt;!-- /.container --&gt;
+    &lt;/div&gt;
+
+
+    &lt;!-- Feedback control --&gt;
+    &lt;j:if test="${gs.isLoggedIn()==true}"&gt;
+        &lt;g:inline template="sport_feedback_modal.xml" /&gt;
+        &lt;div id="feedback" class="visible-lg"&gt;
+            &lt;a href="#feedbackModal" data-toggle="modal"&gt;feedback&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/j:if&gt;
+
+
+    &lt;!-- Bootstrap core JavaScript
+    ================================================== --&gt;
+    &lt;!-- Placed at the end of the document so the pages load faster --&gt;
+    &lt;script language="javascript" src="jquery.latest.min.jsdbx" /&gt;
+    &lt;script language="javascript" src="sport.utils.jsdbx" /&gt;
+    &lt;script language="javascript" src="bootstrap.min.jsdbx" /&gt;
+    &lt;script language="javascript" src="bootstrap.prototypefix.jsdbx" /&gt;
+
+
+    &lt;!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --&gt;
+    &lt;j2:if test="$[jvar_isMSIE8=='true']"&gt;
+          &lt;script language="javascript" src="html5shiv.jsdbx"&gt;&lt;/script&gt;
+          &lt;script language="javascript" src="respond.min.jsdbx"&gt;&lt;/script&gt;
+    &lt;/j2:if&gt;
+
+    &lt;!--&lt;g:inline template="sport_prop_modal.xml" /&gt;--&gt;
+    &lt;g:inline template="sport_release_modal.xml" /&gt;
+
+
+&lt;/j:jelly&gt;]]&gt;&lt;/xml&gt;&lt;/sys_ui_macro&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Sport CMS 3_16 (Fuji)">2c0b046def1002005b14a42d6a2256f9</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin_SHARE</sys_created_by>
+<sys_created_on>2015-05-27 20:23:55</sys_created_on>
+<sys_id>a40b046def1002005b14a42d6a2256fa</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin_SHARE</sys_updated_by>
+<sys_updated_on>2015-05-27 20:23:55</sys_updated_on>
+<table/>
+<target_name>Sport Layout Carousel</target_name>
+<type>Macro</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_macro_1d0a1f73eb2121006395c63ca206fe92</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_macro"&gt;&lt;sys_ui_macro action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;category&gt;general&lt;/category&gt;&lt;description/&gt;&lt;media_type/&gt;&lt;name&gt;sport_feedback_modal&lt;/name&gt;&lt;scoped_name/&gt;&lt;sys_class_name&gt;sys_ui_macro&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_SHARE&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2014-07-03 22:11:08&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;1d0a1f73eb2121006395c63ca206fe92&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_name&gt;sport_feedback_modal&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_macro_1d0a1f73eb2121006395c63ca206fe92&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin_SHARE&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2015-05-27 20:23:39&lt;/sys_updated_on&gt;&lt;xml&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+
+    &lt;j:if test="${gs.isLoggedIn()==true}"&gt;
+	
+    &lt;!-- Modal --&gt;
+    &lt;div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"&gt;
+        &lt;div class="modal-dialog modal-lg"&gt;
+            &lt;div class="modal-content"&gt;
+                &lt;div class="modal-header"&gt;
+                    &lt;div style="float:right;"&gt;&lt;button type="button" class="btn btn-default" data-dismiss="modal" aria-hidden="true"&gt;Close&lt;/button&gt;&lt;/div&gt;
+                    &lt;h4 class="modal-title" id="myModalLabel"&gt;Feedback&lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div class="modal-body"&gt;
+
+                    &lt;iframe id="feedback_main" src="assessment_take2.do?sysparm_assessable_type=87186844d7211100158ba6859e610378" frameborder="0" allowtransparency="true" border="0" width="100%" height="100%" style="min-height:400px;"&gt;
+                    &lt;/iframe&gt;
+
+                &lt;/div&gt;
+                &lt;div class="modal-footer"&gt;
+                    &lt;button type="button" class="btn btn-default" data-dismiss="modal"&gt;Close&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;/j:if&gt;
+
+&lt;/j:jelly&gt;]]&gt;&lt;/xml&gt;&lt;/sys_ui_macro&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Sport CMS 3_16 (Fuji)">2c0b046def1002005b14a42d6a2256f9</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin_SHARE</sys_created_by>
+<sys_created_on>2015-05-27 20:23:55</sys_created_on>
+<sys_id>e40b046def1002005b14a42d6a2256fa</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin_SHARE</sys_updated_by>
+<sys_updated_on>2015-05-27 20:23:55</sys_updated_on>
+<table/>
+<target_name>sport_feedback_modal</target_name>
+<type>Macro</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_macro_23eaa220eb10210093d6c63ca206fe13</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_macro"&gt;&lt;sys_ui_macro action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;category&gt;cms&lt;/category&gt;&lt;description&gt;Dislplays the login or logout portion of the CMS header. &lt;/description&gt;&lt;media_type/&gt;&lt;name&gt;sport_cms_header_login&lt;/name&gt;&lt;scoped_name/&gt;&lt;sys_class_name&gt;sys_ui_macro&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_SHARE&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2014-04-22 13:06:24&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;23eaa220eb10210093d6c63ca206fe13&lt;/sys_id&gt;&lt;sys_mod_count&gt;42&lt;/sys_mod_count&gt;&lt;sys_name&gt;sport_cms_header_login&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_macro_23eaa220eb10210093d6c63ca206fe13&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin_SHARE&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2015-05-27 12:45:32&lt;/sys_updated_on&gt;&lt;xml&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+    &lt;j:if test="${current.login}"&gt;
+        &lt;div&gt;
+            &lt;g:evaluate&gt;
+                var logoutAction = "logout.do";
+                var backtrack_path = "";
+                var tran = GlideTransaction.get();
+                if (tran.isVirtual()) {
+                backtrack_path = "../";
+                logoutAction = backtrack_path + logoutAction;
+                }
+                var pageLink = new GlideCMSPageLink().getPageLink(current_page.getID()).substring(3);
+                try {
+                var documentKey = RP.getParameterValue('sysparm_document_key');
+                if (documentKey)
+                pageLink += '?sysparm_document_key=' + documentKey;
+                } catch(err) {
+                }
+                var pageLinkNotEncoded = pageLink;
+                pageLink = GlideStringUtil.urlEncode(pageLink);
+            &lt;/g:evaluate&gt;
+            &lt;j:if test="${gs.getSession().isLoggedIn()}"&gt;
+                &lt;g:evaluate var="jvar_logout_url"&gt;
+                    var defaultPageLink = "";
+                    var siteGR = new GlideRecord("content_site");
+                    if (siteGR.get(current_page.getSiteID())) {
+                    var defaultPageId = siteGR.getValue("default_page");
+                    if (defaultPageId)
+                    defaultPageLink = new GlideCMSPageLink().getPageLink(defaultPageId).substring(3);
+                    }
+                    defaultPageLink;
+                &lt;/g:evaluate&gt;
+                &lt;g:evaluate var="jvar_first_name"&gt;
+                    var u = gs.getUser();
+                    var f = user.getFirstName();
+                    f;
+                &lt;/g:evaluate&gt;
+                &lt;form name="logoutPage" action="${logoutAction}"&gt;
+                    &lt;j:if test="${jvar_logout_url!=''}"&gt;
+                        &lt;input type="hidden" name="sysparm_goto_url" value="logout_redirect.do?sysparm_url=${jvar_logout_url}" /&gt;
+                    &lt;/j:if&gt;
+                    &lt;div class="cms_header_login_link"&gt;
+                        &lt;j:if test="${!gs.getUser().isXML()}"&gt;
+                            &lt;!-- ${gs.getMessage('Hi')}$[SP]&lt;a href="profile.do"&gt;&lt;b&gt; ${jvar_first_name}&lt;/b&gt;&lt;/a&gt;$[SP]$[SP]$[SP] --&gt;
+
+                            &lt;li class="dropdown"&gt;
+                                &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;${gs.getMessage('Hi')}$[SP]${jvar_first_name} &lt;b class="caret"&gt;&lt;/b&gt;$[SP]$[SP]$[SP]&lt;/a&gt;
+                                &lt;ul class="dropdown-menu"&gt;
+                                    &lt;li&gt;&lt;a href="profile.do"&gt;&lt;i class="fa fa-male fa-fw fa-black"&gt;&lt;/i&gt;$[SP]My Profile&lt;/a&gt;&lt;/li&gt;
+                                    &lt;li&gt;&lt;a href="logout.do" onclick="logoutPage.submit()"&gt;&lt;i class="fa fa-eject fa-fw fa-black"&gt;&lt;/i&gt;$[SP]${gs.getMessage('Logout')}&lt;/a&gt;&lt;/li&gt;
+                                    &lt;j:if test="${gs.hasRole('admin')}"&gt;
+                                        &lt;li&gt;&lt;a href="admindoc.do"&gt;&lt;i class="fa fa-book fa-fw fa-black"&gt;&lt;/i&gt;$[SP]Documentation&lt;/a&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;a href="editpage.do?sysparm_page_id=${current_page.getID()}"&gt;&lt;i class="fa fa-edit fa-fw fa-black"&gt;&lt;/i&gt;$[SP]Edit This Page&lt;/a&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;a href="#propsModal" data-toggle="modal"&gt;&lt;i class="fa fa-gear fa-fw fa-black"&gt;&lt;/i&gt;$[SP]Settings&lt;/a&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;a href="#releaseModal" data-toggle="modal"&gt;&lt;i class="fa fa-desktop fa-fw fa-black"&gt;&lt;/i&gt;$[SP]Release Notes&lt;/a&gt;&lt;/li&gt;
+                                    &lt;/j:if&gt;
+                                &lt;/ul&gt;
+                            &lt;/li&gt;
+
+
+                        &lt;/j:if&gt;
+                        &lt;j:if test="${gs.getUser().isXML()}"&gt;
+                            &lt;li&gt;${gs.getMessage('Hi')}$[SP]&lt;b&gt;${jvar_first_name}&lt;/b&gt;$[SP]$[SP]$[SP]&lt;/li&gt;
+
+                            &lt;li class="dropdown"&gt;
+                                &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;${gs.getMessage('Hi')}$[SP]${jvar_first_name} &lt;b class="caret"&gt;&lt;/b&gt;$[SP]$[SP]$[SP]&lt;/a&gt;
+                                &lt;ul class="dropdown-menu"&gt;
+                                    &lt;li&gt;&lt;a href="profile.do"&gt;&lt;i class="fa fa-male fa-fw fa-black"&gt;&lt;/i&gt;$[SP]My Profile&lt;/a&gt;&lt;/li&gt;
+                                    &lt;j:if test="${gs.hasRole('admin')}"&gt;
+                                        &lt;li&gt;&lt;a href="admindoc.do"&gt;&lt;i class="fa fa-book fa-fw fa-black"&gt;&lt;/i&gt;$[SP]Documentation&lt;/a&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;a href="editpage.do?sysparm_page_id=${current_page.getID()}"&gt;&lt;i class="fa fa-edit fa-fw fa-black"&gt;&lt;/i&gt;$[SP]Edit This Page&lt;/a&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;a href="#propsModal" data-toggle="modal"&gt;&lt;i class="fa fa-gear fa-fw fa-black"&gt;&lt;/i&gt;$[SP]Settings&lt;/a&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;a href="#releaseModal" data-toggle="modal"&gt;&lt;i class="fa fa-desktop fa-fw fa-black"&gt;&lt;/i&gt;$[SP]Release Notes&lt;/a&gt;&lt;/li&gt;
+                                    &lt;/j:if&gt;
+                                &lt;/ul&gt;
+                            &lt;/li&gt;
+
+                        &lt;/j:if&gt;
+
+
+                        &lt;!-- &lt;a class="cms_header_login_link" onclick="logoutPage.submit()"&gt;${gs.getMessage('Logout')}&lt;/a&gt;$[SP]$[SP] --&gt;
+
+                    &lt;/div&gt;
+                &lt;/form&gt;
+            &lt;/j:if&gt;
+            &lt;j:if test="${!gs.getSession().isLoggedIn()}"&gt;
+                &lt;!--
+                &lt;j:set var="jvar_login_highlight" value="" /&gt;
+                &lt;g:evaluate var="jvar_login_failed" expression="RP.getParameterValue('sysparm_login_failed')" /&gt;
+                &lt;j:if test="${jvar_login_failed=='true'}"&gt;
+                    &lt;j:set var="jvar_login_highlight" value="cms_login_failed_inputs" /&gt;
+                    &lt;script&gt;
+                        setTimeout(signInFailed,10);
+                        function signInFailed() {
+                        var userName = gel("user_name");
+                        var y = userName.offsetTop + userName.offsetHeight;
+                        var x = grabOffsetLeft(userName);
+                        var div = cel("div");
+                        div.id = "login_failed";
+                        div.style.position = "absolute";
+                        div.style.top = y;
+                        div.style.left = x;
+                        div.className = "cms_login_failed_message";
+                        div.innerHTML = "${gs.getMessage('Login failed.  Try again.')}";
+                        document.body.appendChild(div);
+                        userName.focus();
+                        setTimeout(signInFailedHide,5000);
+                        }
+                        function signInFailedHide() {
+                        var div = gel("login_failed");
+                        if (div)
+                        rel(div);
+                        }
+                    &lt;/script&gt;
+                &lt;/j:if&gt;
+                --&gt;
+                
+                &lt;!--
+                    &lt;input type="hidden" name="sysparm_login_url" value="cms_login_fail_redirect.html?v=${gs.getProperty('glide.builddate')}${AMP}sysparm_flush_messages=true${AMP}sysparm_goto_url=../${pageLink}%26sysparm_login_failed=true" /&gt;
+                    &lt;input type="hidden" name="sysparm_goto_url" value="${backtrack_path}cms_login_redirect.do?v=${gs.getProperty('glide.builddate')}${AMP}sysparm_goto_url=${pageLinkNotEncoded}" /&gt;
+                    &lt;input type="hidden" name="sysparm_flush_messages" value="true" /&gt;
+                    &lt;input type="hidden" name="sys_action" value="sysverb_login" /&gt;
+                    &lt;j:switch on="${gs.getProperty('glide.ui.forgetme')}"&gt;
+                        &lt;j:case value="true"&gt;
+                            &lt;j:set var="jvar_remember_me" value="false" /&gt;
+                        &lt;/j:case&gt;
+                        &lt;j:default&gt;
+                            &lt;j:set var="jvar_remember_me" value="true" /&gt;
+                        &lt;/j:default&gt;
+                    &lt;/j:switch&gt;
+                    &lt;input type="hidden" id="remember_me" name="remember_me" value="${jvar_remember_me}" /&gt;
+                    &lt;span id="sign_in_block"&gt;
+                                   ${gs.getMessage('User name')}:&lt;input type="text" id="user_name" name="user_name" value="" autocomplete="off" class="${jvar_login_highlight}" /&gt;$[SP]$[SP]${gs.getMessage('Password')}:&lt;input type="password" id="user_password" name="user_password" class="${jvar_login_highlight}" /&gt;&lt;button class="cms_header_login_button" type="submit"&gt; ${gs.getMessage('Login')} &lt;/button&gt;&lt;/span&gt;
+                &lt;/form&gt;
+                &lt;iframe name="login_iframe" src="blank.do" style="display:none" /&gt;
+            --&gt;
+            &lt;/j:if&gt;
+        &lt;/div&gt;
+    &lt;/j:if&gt;
+&lt;/j:jelly&gt;]]&gt;&lt;/xml&gt;&lt;/sys_ui_macro&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Sport CMS 3_16 (Fuji)">2c0b046def1002005b14a42d6a2256f9</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin_SHARE</sys_created_by>
+<sys_created_on>2015-05-27 20:23:55</sys_created_on>
+<sys_id>280b046def1002005b14a42d6a2256fa</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin_SHARE</sys_updated_by>
+<sys_updated_on>2015-05-27 20:23:55</sys_updated_on>
+<table/>
+<target_name>sport_cms_header_login</target_name>
+<type>Macro</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_macro_a5557f2c4dd4a580bc95842eaf535463</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_macro"&gt;&lt;sys_ui_macro action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;category&gt;general&lt;/category&gt;&lt;description/&gt;&lt;media_type/&gt;&lt;name&gt;sport_task_indicator&lt;/name&gt;&lt;scoped_name/&gt;&lt;sys_class_name&gt;sys_ui_macro&lt;/sys_class_name&gt;&lt;sys_created_by&gt;aoconnor_SHARE&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2014-04-22 18:31:53&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;a5557f2c4dd4a580bc95842eaf535463&lt;/sys_id&gt;&lt;sys_mod_count&gt;48&lt;/sys_mod_count&gt;&lt;sys_name&gt;sport_task_indicator&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_macro_a5557f2c4dd4a580bc95842eaf535463&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin_SHARE&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2015-05-27 12:57:35&lt;/sys_updated_on&gt;&lt;xml&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+
+
+
+  &lt;g:evaluate var="jvar_count" object="true"&gt;
+    var count = new GlideAggregate('sysapproval_approver');
+    count.addEncodedQuery('approver=javascript:gs.getUserID()^stateNOT INapproved,rejected,cancelled,not_required');
+    count.addAggregate('COUNT');
+    count.query();
+    var approvals = 0;
+    if (count.next())
+    approvals = count.getAggregate('COUNT');
+
+    count = new GlideAggregate('incident');
+    count.addQuery('caller_id', gs.getUserID());
+    count.addQuery('active','true');
+    count.addAggregate('COUNT');
+    count.query();
+    var incidents = 0;
+    if (count.next())
+    incidents = count.getAggregate('COUNT');
+
+    count = new GlideAggregate('sc_req_item');
+    count.addQuery('opened_by', gs.getUserID());
+    count.addQuery('active','true');
+    count.addAggregate('COUNT');
+    count.query();
+    var items = 0;
+    if (count.next())
+    items = count.getAggregate('COUNT');
+
+    count = new GlideAggregate('change_request');
+    count.addEncodedQuery('u_business_owner=javascript:gs.getUserID()^ORrequested_by=javascript:gs.getUserID()^active=true^stateNOT IN3,4,17');
+    count.addAggregate('COUNT');
+    count.query();
+    var changes = 0;
+    if (count.next())
+    changes = count.getAggregate('COUNT');
+
+	  /*
+	  count = new GlideAggregate('task');
+	  count.addEncodedQuery('u_caller=javascript:gs.getUserID()^ORassigned_to=javascript:gs.getUserID()^active=true^sys_class_name!=change_task^ORsys_class_name!=incident^ORsys_class_name!=sc_request^ORsys_class_name!=sc_req_item');
+	  count.addAggregate('COUNT');
+    count.query();
+    var tasks = 0;
+    if (count.next())
+    tasks = count.getAggregate('COUNT');
+	  */
+
+
+	  var total = +approvals + +incidents + +items + +changes; //+ +tasks;
+    var arr = total.toString().split('.');
+    total = arr[0];
+
+    total;
+  &lt;/g:evaluate&gt;
+
+  &lt;j:if test="${jvar_count &gt; 0}"&gt;
+     &lt;!-- &lt;a href="to_do.do" id="taskCountLink"&gt;&lt;span class="task_count"&gt;${jvar_count}&lt;/span&gt;&lt;/a&gt; --&gt;
+     &lt;div class="noti_bubble badge"&gt;${jvar_count}&lt;/div&gt;
+  &lt;/j:if&gt;
+
+&lt;/j:jelly&gt;]]&gt;&lt;/xml&gt;&lt;/sys_ui_macro&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Sport CMS 3_16 (Fuji)">2c0b046def1002005b14a42d6a2256f9</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin_SHARE</sys_created_by>
+<sys_created_on>2015-05-27 20:23:55</sys_created_on>
+<sys_id>680b046def1002005b14a42d6a2256fa</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin_SHARE</sys_updated_by>
+<sys_updated_on>2015-05-27 20:23:55</sys_updated_on>
+<table/>
+<target_name>sport_task_indicator</target_name>
+<type>Macro</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>DELETE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_script_c4731741ef1002005b14a42d6a22563d</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_script"&gt;&lt;sys_ui_script action="DELETE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;description/&gt;&lt;global&gt;false&lt;/global&gt;&lt;name&gt;jquery.feedback-me.latest&lt;/name&gt;&lt;script&gt;&lt;![CDATA[/*global $, jQuery*/
+/*jslint plusplus: true*/
+
+/*!
+* jQuery Feedback Me Plugin
+* 
+* File:        jquery.feedback_me.js
+ * Version:     0.5.8
+* 
+* Author:      Daniel Reznick
+* Info:        https://github.com/vedmack/feedback_me 
+* Contact:     vedmack@gmail.com
+* Twitter:     @danielreznick
+* Q&amp;A:         https://groups.google.com/forum/#!forum/daniels_code	
+* 
+* Copyright (c) 2014 Daniel Reznick, all rights reserved. released under the MIT license
+* 
+* This source file is distributed in the hope that it will be useful, but 
+* WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY 
+* or FITNESS FOR A PARTICULAR PURPOSE. See the license files for details.
+*/
+/*
+* Parameters:
+*
+*					
+* -------------
+
+* feedback_url
+				Required:			true
+				Type:				String
+				Description:		URL of your servlet/php etc ('name', 'message' and 'email' parameters will be send to your servlet/php etc...)
+
+* position				
+				Required:			false
+				Type:				String
+				Default value:		left-top
+				Possible values:	left-top / left-bottom / right-top / right-bottom 
+				Description:		Set the position where the feedback widget will be located
+* jQueryUI
+				Required:			false
+				Type:				boolean
+				Default value:		false
+				Description:		Tell the plugin to use jQuery UI theme
+
+* bootstrap
+				Required:			false
+				Type:				boolean
+				Default value:		false
+				Description:		Tell the plugin to use twitter bootstrap
+
+* show_email
+				Required:			false
+				Type:				boolean
+				Default value:		false
+				Description:		Tell the plugin to display email input field
+
+* show_radio_button_list
+				Required:			false
+				Type:				boolean
+				Default value:		false
+				Description:		Tell the plugin to set of 5 radio buttons
+				
+* name_label
+				Required:			false
+				Type:				String
+				Default value:		"Name"
+				Description:		Label for name input
+
+* email_label
+				Required:			false
+				Type:				String
+				Default value:		"Email"
+				Description:		Label for email input
+
+* message_label
+				Required:			false
+				Type:				String
+				Default value:		"Message"
+				Description:		Label for message input
+
+* radio_button_list_labels
+				Required:			false
+				Type:				Array of 5 strings
+				Default value:		["1","2","3","4","5"]
+				Description:		Labels for radio button list
+
+* radio_button_list_title
+				Required:			false
+				Type:				String
+				Default value:		"How would you rate my site?"
+				Description:		Label that will appear above the list of radio button
+				
+* submit_label
+				Required:			false
+				Type:				String
+				Default value:		"Send"
+				Description:		Label for submit input
+
+* title_label
+				Required:			false
+				Type:				String
+				Default value:		"Feedback"
+				Description:		Label for title text
+
+* trigger_label
+				Required:			false
+				Type:				String
+				Default value:		"Feedback"
+				Description:		Label for open/close (trigger) button
+
+* name_placeholder
+				Required:			false
+				Type:				String
+				Default value:		""
+				Description:		Watermark for name input
+
+* email_placeholder
+				Required:			false
+				Type:				String
+				Default value:		""
+				Description:		Watermark for email input
+
+* message_placeholder
+				Required:			false
+				Type:				String
+				Default value:		""
+				Description:		Watermark for message input
+
+* name_pattern				
+				Required:			false
+				Type:				String
+				Default value:		""
+				Description:		Set name input pattern, you must escape your '\' chars (\ ---&gt; \\)
+
+* name_required
+				Required:			false
+				Type:				boolean
+				Default value:		false
+				Description:		Makes input required
+
+* email_required
+				Required:			false
+				Type:				boolean
+				Default value:		false
+				Description:		Makes input required
+
+* message_required
+				Required:			false
+				Type:				boolean
+				Default value:		false
+				Description:		Makes input required
+
+* radio_button_list_required
+				Required:			false
+				Type:				boolean
+				Default value:		false
+				Description:		Makes radio inputs required
+
+* show_asterisk_for_required
+				Required:			false
+				Type:				boolean
+				Default value:		false
+				Description:		Add an asterisk to the label of the required inputs
+
+* close_on_click_outside				
+				Required:			false
+				Type:				boolean
+				Default value:		true
+				Description:		Will cause the feedback dialog to be closed on clicking anywhere outside the dialog
+				
+* custom_params				
+				Required:			false
+				Type:				object
+				Default value:		{}
+				Description:		Use it if you want to send additional data to the server (can be used for sending: csrf token / logged in user_name / etc`)
+* iframe_url				
+				Required:			false
+				Type:				String
+				Default value:		undefined
+				Description:		Allows you to use any html file that you want, it will be placed inside feedback_me widget, (note that in order to close the feedback_me widget
+									just call the following command: parent.fm.triggerAction(event, "left-top"); don't forget to pass the "event" from you onclick call to the triggerAction function
+									and also the position of your feedback widget left-top / left-bottom / right-top / right-bottom)
+* show_form				
+				Required:			false
+				Type:				boolean
+				Default value:		true
+				Description:		Allows you to hide the form in the widget (and only show HTML code or iframe)
+* custom_html				
+				Required:			false
+				Type:				String
+				Default value:		""
+				Description:		Allows you to use any inline html code that you want, it will be placed inside feedback_me widget
+* delayed_close 
+				Required:			false
+				Type:				boolean
+				Default value:		true
+				Description:		Enable feedback dialog upon feedback sending, a small dialog will be displayed with	appropriate message in the middle
+									of the screen and then fade out (read more about the delayed_options property)
+* delayed_options
+				Required:			false
+				Type:				object
+				Default value:
+									{
+										delay_success_milliseconds : 2000,
+										delay_fail_milliseconds : 2000,
+										sending : "Sending...", //This text will appear on the "send" button while sending
+										send_fail : "Sending failed.", //This text will appear on the fail dialog
+										send_success : "Feedack sent.", //This text will appear on the success dialog
+										fail_color : undefined,
+										success_color : undefined,
+										custom_html_success: undefined, //Allow to customize delayed success feedback with custom html code, note that the html will be wrapped with div with the following classes feedback-delayed-custom-dlg success
+										custom_html_fail: undefined, //Allow to customize delayed fail feedback with custom html code, note that the html will be wrapped with div with the following classes feedback-delayed-custom-dlg fail
+									}
+				Description:		Allow to customize the feedback dialog upon feedback sending
+*
+*
+*/
+var fm = (function ($) {
+
+	'use strict';
+
+	var fm_options_arr = {},
+		supportsTransitions = false;
+
+	function eventTargetFixUp(pEvent) {
+		if (pEvent.target === undefined) {
+            pEvent.target = pEvent.srcElement;
+        }
+		return pEvent;
+	}
+
+	function getFmOptions(event, position) {
+		var className,
+			selector;
+		event = eventTargetFixUp(event);
+		if ($(event.target).closest(".feedback_trigger").length === 1) {
+			className = $(event.target).closest(".feedback_trigger")[0].className;
+		} else if ($(event.target).closest(".feedback_content").length === 1) {
+			className = $(event.target).closest(".feedback_content")[0].className;
+		} else {
+			if (position === undefined) {
+				position = 'left-top';
+			}
+			className = position;
+		}
+
+		if (className.indexOf('left-top') !== -1) {
+			selector = 'left-top';
+		} else if (className.indexOf('left-bottom') !== -1) {
+			selector = 'left-bottom';
+		} else if (className.indexOf('right-top') !== -1) {
+			selector = 'right-top';
+		} else if (className.indexOf('right-bottom') !== -1) {
+			selector = 'right-bottom';
+		}
+		return fm_options_arr[selector];
+	}
+
+	function triggerAction(event, position) {
+
+		var animation_show = {},
+			animation_hide = {},
+			$fm_trigger,
+			$fm_content;
+
+		event = eventTargetFixUp(event);
+		animation_show.marginLeft = "+=380px";
+		animation_hide.marginLeft = "-=380px";
+
+		if (fm.getFmOptions(event, position).position.indexOf("right-") !== -1) {
+			animation_show.marginRight = "+=380px";
+			animation_hide.marginRight = "-=380px";
+		}
+
+		$fm_trigger = $(event.target).closest(".feedback_trigger");
+		if ($fm_trigger.length === 1) {
+			$fm_content = $fm_trigger.next();
+		} else {
+			$fm_content = $(event.target).closest(".feedback_content");
+			$fm_trigger = $fm_content.prev();
+		}
+		if ($fm_content.length === 0 || $fm_trigger.length === 0) {
+			if (position === undefined) {
+				position = 'left-top';
+			}
+			$fm_content = $('.' + position).closest(".feedback_content");
+			$fm_trigger = $fm_content.prev();
+		}
+
+		if ($fm_trigger.hasClass("feedback_trigger_closed")) {
+			if (supportsTransitions === true) {
+				$fm_trigger.removeClass("feedback_trigger_closed");
+				$fm_content.removeClass("feedback_content_closed");
+			} else {
+				$fm_trigger.add($fm_content).animate(
+					animation_show,
+					150,
+					function () {
+						$fm_trigger.removeClass("feedback_trigger_closed");
+						$fm_content.removeClass("feedback_content_closed");
+					}
+				);
+			}
+		} else {
+			//first add the closed class so double (which will trigger closeFeedback function) click wont try to hide the form twice
+			$fm_trigger.addClass("feedback_trigger_closed");
+			$fm_content.addClass("feedback_content_closed");
+			if (supportsTransitions === false) {
+				$fm_trigger.add($fm_content).animate(
+					animation_hide,
+					150
+				);
+			}
+		}
+	}
+
+	function closeFeedback(event) {
+		event = eventTargetFixUp(event);
+		if (($(".feedback_content").length === 1 &amp;&amp; $(".feedback_content").hasClass("feedback_content_closed")) ||
+				$(event.target).closest('.feedback_content').length === 1) {
+			return;
+		}
+
+		var animation_hide = {},
+			option,
+			$fm_trigger,
+			$fm_content;
+
+		for (option in fm_options_arr) {
+			if (fm_options_arr.hasOwnProperty(option)) {
+
+				$fm_content = $('.' + option).closest(".feedback_content");
+				$fm_trigger = $fm_content.prev();
+
+				if (!$fm_trigger.hasClass("feedback_trigger_closed")) {
+					if (supportsTransitions === true) {
+						$fm_trigger.addClass("feedback_trigger_closed");
+						$fm_content.addClass("feedback_content_closed");
+					} else {
+						if (option.indexOf("left-") !== -1) {
+							animation_hide.marginLeft = "-=380px";
+						} else {
+							animation_hide.marginRight = "-=380px";
+						}
+						if (!$fm_trigger.hasClass("feedback_kurama")) {
+							$fm_trigger.addClass("feedback_kurama");
+							$fm_trigger.add($fm_content).animate(
+								animation_hide,
+								150,
+								function () {
+									var $fm_trigger,
+										$fm_content;
+									$fm_trigger = $(this);
+									$fm_content = $fm_trigger.next();
+									$fm_trigger.removeClass("feedback_kurama");
+									$fm_trigger.addClass("feedback_trigger_closed");
+									$fm_content.addClass("feedback_content_closed");
+								}
+							);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	function emailValid(str) {
+		var lastAtPos = str.lastIndexOf('@');
+		return (lastAtPos &lt; (str.length - 1) &amp;&amp; lastAtPos &gt; 0 &amp;&amp; str.indexOf('@@') === -1 &amp;&amp; str.length &gt; 2);
+	}
+
+	function validateFeedbackForm(event, position) {
+		event = eventTargetFixUp(event);
+		var $fm_content = $(event.target).closest(".feedback_content"),
+			fm_options = getFmOptions(event, position);
+		if ((fm_options.name_required === true &amp;&amp; $fm_content.find(".feedback_name").val() === "") ||
+				((fm_options.email_required === true &amp;&amp; $fm_content.find(".feedback_email").val() === "") || (fm_options.email_required === true &amp;&amp; emailValid($fm_content.find(".feedback_email").val()) === false)) ||
+				(fm_options.message_required === true &amp;&amp; $fm_content.find(".feedback_message").val() === "") ||
+				(fm_options.radio_button_list_required === true &amp;&amp; $fm_content.find("input[name=feedback_radio]:checked").val() === undefined)) {
+			return false;
+		}
+		return true;
+
+	}
+
+	function checkPatternFieldsOk(event, position) {
+		var $patternFields = $("." + position + " [pattern]"),
+			form_valid = true,
+			i;
+
+		if ($patternFields.length &gt; 0) {
+			for (i = 0; i &lt; $patternFields.length; i++) {
+				form_valid = !$patternFields[i].validity.patternMismatch;
+				if (form_valid === false) {
+					break;
+				}
+			}
+		}
+		return form_valid;
+	}
+
+	function checkRequiredFieldsOk(event, position) {
+		var $reqFields = $("." + position + " [required]"),
+			form_valid = true;
+
+		if ($reqFields.length &gt; 0) {
+			form_valid = validateFeedbackForm(event, position);
+		}
+		return form_valid;
+	}
+
+	function applyCloseOnClickOutside() {
+		var jqVersion = $().jquery.split(".");
+		jqVersion[0] = +jqVersion[0];
+		jqVersion[1] = +jqVersion[1];
+		if (jqVersion[0] &gt;= 1 &amp;&amp; jqVersion[1] &gt;= 7) {
+			$(document).on("click", document, function (event) {
+				closeFeedback(event);
+			});
+		} else {
+			$(document).delegate("body", document, function (event) {
+				closeFeedback(event);
+			});
+		}
+	}
+
+	function appendFeedbackToBody(fm_options) {
+		var form_html = "",
+			iframe_html = "",
+			jQueryUIClasses1 = "",
+			jQueryUIClasses2 = "",
+			jQueryUIClasses3 = "",
+			jQueryUIClasses4 = "",
+			email_html = "",
+			email_feedback_content_class = "",
+			radio_button_list_html = "",
+			radio_button_list_class = "",
+			fm_class = " fm_clean ",
+			jquery_class = "",
+			bootstrap_class = "",
+			bootstrap_btn = "",
+			bootstrap_hero_unit = "",
+
+			name_pattern = fm_options.name_pattern === "" ? "" : "pattern=\"" + fm_options.name_pattern + "\"",
+
+			name_required = fm_options.name_required ? "required" : "",
+			email_required = fm_options.email_required ? "required" : "",
+			message_required = fm_options.message_required ? "required" : "",
+			radio_button_list_required = fm_options.radio_button_list_required ? "required" : "",
+
+			name_asterisk  = fm_options.name_required &amp;&amp; fm_options.show_asterisk_for_required ? "&lt;span class=\"required_asterisk\"&gt;*&lt;/span&gt;" : "",
+			email_asterisk  = fm_options.email_required &amp;&amp; fm_options.show_asterisk_for_required ? "&lt;span class=\"required_asterisk\"&gt;*&lt;/span&gt;" : "",
+			message_asterisk  = fm_options.message_required &amp;&amp; fm_options.show_asterisk_for_required ? "&lt;span class=\"required_asterisk\"&gt;*&lt;/span&gt;" : "",
+			radio_button_list_asterisk = fm_options.radio_button_list_required &amp;&amp; fm_options.show_asterisk_for_required ? "&lt;span class=\"required_asterisk\"&gt;*&lt;/span&gt;" : "";
+
+		if (fm_options.bootstrap === true) {
+			bootstrap_class = " fm_bootstrap ";
+			bootstrap_btn = " btn btn-primary ";
+			bootstrap_hero_unit = " hero-unit ";
+
+			fm_class = "";
+			jquery_class = "";
+		}
+
+		if (fm_options.jQueryUI === true) {
+			jquery_class = " fm_jquery ";
+			jQueryUIClasses1 = " ui-widget-header ui-corner-all ui-helper-clearfix ";
+			jQueryUIClasses2 = " ui-dialog ui-widget ui-widget-content ui-corner-all ";
+			jQueryUIClasses3 = " ui-dialog-titlebar ";
+			jQueryUIClasses4 = " ui-dialog-title ";
+
+			fm_class = "";
+			bootstrap_class = "";
+			bootstrap_hero_unit = "";
+			bootstrap_btn = "";
+
+		}
+
+		if (fm_options.show_radio_button_list === true) {
+			radio_button_list_html = "&lt;li&gt;&lt;div class=\"radio_button_list_title_wrapper\"&gt;&lt;div class=\"radio_button_list_title\"&gt;" + fm_options.radio_button_list_title + radio_button_list_asterisk + "&lt;/div&gt;&lt;/div&gt;&lt;div class=\"radio_button_list_wrapper\"&gt;";
+			radio_button_list_html += "    &lt;div class=\"radio_button_wrapper\"&gt;";
+			radio_button_list_html += "        &lt;input value=\"1\" type=\"radio\" name=\"feedback_radio\" class=\"feedback_radio_1\" " + radio_button_list_required + "\/&gt;";
+			radio_button_list_html += "        &lt;label for=\"feedback_radio_1\"&gt;" + fm_options.radio_button_list_labels[0] + "&lt;\/label&gt;";
+			radio_button_list_html += "    &lt;\/div&gt;";
+			radio_button_list_html += "    &lt;div class=\"radio_button_wrapper\"&gt;";
+			radio_button_list_html += "        &lt;input value=\"2\" type=\"radio\" name=\"feedback_radio\" class=\"feedback_radio_2\"\/&gt;";
+			radio_button_list_html += "        &lt;label for=\"feedback_radio_2\"&gt;" + fm_options.radio_button_list_labels[1] + "&lt;\/label&gt;";
+			radio_button_list_html += "    &lt;\/div&gt;";
+			radio_button_list_html += "    &lt;div class=\"radio_button_wrapper\"&gt;";
+			radio_button_list_html += "        &lt;input value=\"3\" type=\"radio\" name=\"feedback_radio\" class=\"feedback_radio_3\"\/&gt;";
+			radio_button_list_html += "        &lt;label for=\"feedback_radio_3\"&gt;" + fm_options.radio_button_list_labels[2] + "&lt;\/label&gt;";
+			radio_button_list_html += "    &lt;\/div&gt;";
+			radio_button_list_html += "    &lt;div class=\"radio_button_wrapper\"&gt;";
+			radio_button_list_html += "        &lt;input value=\"4\" type=\"radio\" name=\"feedback_radio\" class=\"feedback_radio_4\"\/&gt;";
+			radio_button_list_html += "        &lt;label for=\"feedback_radio_4\"&gt;" + fm_options.radio_button_list_labels[3] + "&lt;\/label&gt;";
+			radio_button_list_html += "    &lt;\/div&gt;";
+			radio_button_list_html += "    &lt;div class=\"radio_button_wrapper\"&gt;";
+			radio_button_list_html += "        &lt;input value=\"5\" type=\"radio\" name=\"feedback_radio\" class=\"feedback_radio_5\"\/&gt;";
+			radio_button_list_html += "        &lt;label for=\"feedback_radio_5\"&gt;" + fm_options.radio_button_list_labels[4] + "&lt;\/label&gt;";
+			radio_button_list_html += "    &lt;\/div&gt;";
+			radio_button_list_html += "&lt;\/div&gt;&lt;/li&gt;";
+
+			radio_button_list_class = " radio_button_list_present";
+		}
+
+		if (fm_options.show_email === true) {
+			email_html = '&lt;li&gt;	&lt;label for="feedback_email"&gt;' + fm_options.email_label + '&lt;/label&gt; ' + email_asterisk + ' &lt;input type="email" class="feedback_email" ' + email_required + ' placeholder="' + fm_options.email_placeholder + '"&gt;&lt;/input&gt; &lt;/li&gt;';
+			email_feedback_content_class = " email_present";
+		}
+
+		if (fm_options.show_form === true) {
+			form_html = '&lt;form class="feedback_me_form"&gt;'
+				+	'&lt;ul&gt;'
+				+		'&lt;li&gt;	&lt;label for="feedback_name"&gt;' + fm_options.name_label + '&lt;/label&gt; ' + name_asterisk + ' &lt;input type="text" class="feedback_name" ' + name_required + ' placeholder="' + fm_options.name_placeholder + '" ' + name_pattern + '&gt;&lt;/input&gt; &lt;/li&gt;'
+
+				+		 email_html
+
+				+		'&lt;li&gt;	&lt;label for="feedback_message"&gt;' + fm_options.message_label + '&lt;/label&gt; ' + message_asterisk + ' &lt;textarea rows="5" class="feedback_message" ' + message_required + ' placeholder="' + fm_options.message_placeholder + '"&gt;&lt;/textarea&gt; &lt;/li&gt;'
+
+				+		 radio_button_list_html
+
+				+		'&lt;li&gt;	&lt;button type="submit" onclick="fm.stopPropagation(event);fm.sendFeedback(event,\'' + fm_options.position + '\');" class="feedback_submit ' + bootstrap_btn + '"&gt;' + fm_options.submit_label + '&lt;/button&gt; &lt;/li&gt;'
+				+	'&lt;/ul&gt;'
+				+	'&lt;/form&gt;';
+		}
+		if (fm_options.iframe_url !== undefined) {
+			iframe_html = '&lt;iframe name="feedback_me_frame" class="feedback_me_frame" frameborder="0" src="' + fm_options.iframe_url + '"&gt;&lt;/iframe&gt;';
+		}
+
+		$('body').append('&lt;div onclick="fm.stopPropagation(event);fm.triggerAction(event,\'' + fm_options.position + '\');" class="feedback_trigger feedback_trigger_closed ' + fm_options.position + jQueryUIClasses1 + fm_class + jquery_class + bootstrap_class + bootstrap_hero_unit + '"&gt;'
+				+	'&lt;span class="feedback_trigger_text"&gt;' + fm_options.trigger_label
+				+	'&lt;/span&gt;&lt;/div&gt;');
+
+		$('body').append('&lt;div class="feedback_content feedback_content_closed ' + fm_options.position + email_feedback_content_class + radio_button_list_class + jQueryUIClasses2 + fm_class + jquery_class + bootstrap_class + bootstrap_hero_unit + '"&gt;'
+							+ '&lt;div class="feedback_title ' + jQueryUIClasses1 + jQueryUIClasses3 + '"&gt;'
+							+	'&lt;span class="' + jQueryUIClasses4 + '"&gt;' + fm_options.title_label + '&lt;/span&gt;'
+							+ '&lt;/div&gt;'
+							+  form_html
+							+  iframe_html
+							+  fm_options.custom_html
+						+ '&lt;/div&gt;');
+
+		if (fm_options.jQueryUI === true) {
+			$('.feedback_submit').button({
+				icons: {
+					primary: 'ui-icon-mail-closed'
+				}
+			});
+		}
+
+		if (fm_options.close_on_click_outside === true) {
+			applyCloseOnClickOutside();
+		}
+
+		//prevent form submit (needed for validation)
+		$('.feedback_me_form').submit(function (event) {
+			event.preventDefault();
+		});
+
+	}
+
+	function stopPropagation(evt) {
+		if (evt.stopPropagation !== undefined) {
+			evt.stopPropagation();
+		} else {
+			evt.cancelBubble = true;
+		}
+	}
+
+	function slideBack(fm_options, $fm_trigger, $fm_content) {
+		var animation_hide = {};
+		animation_hide.marginLeft = "-=380px";
+		if (fm_options.position.indexOf("right-") !== -1) {
+			animation_hide.marginRight = "-=380px";
+		}
+
+		if (supportsTransitions === true) {
+			$fm_trigger.addClass("feedback_trigger_closed");
+			$fm_content.addClass("feedback_content_closed");
+		} else {
+			$fm_trigger.add($fm_content).animate(
+				animation_hide,
+				150,
+				function () {
+					$fm_trigger.addClass("feedback_trigger_closed");
+				}
+			);
+		}
+	}
+	function clearInputs(event) {
+		event = eventTargetFixUp(event);
+		var $fm_content = $(event.target).closest(".feedback_content");
+
+		$fm_content.find(".feedback_name").val("");
+		$fm_content.find(".feedback_message").val("");
+		$fm_content.find(".feedback_email").val("");
+		$fm_content.find(".feedback_me_form input[name=feedback_radio]").prop('checked', false);
+	}
+
+	function sendFeedback(event, position) {
+		var checkValid = checkRequiredFieldsOk(event, position),
+			checkPattern = checkPatternFieldsOk(event, position),
+			dataArray,
+			$fm_trigger,
+			$fm_content,
+			fm_options = getFmOptions(event, position);
+
+		event = eventTargetFixUp(event);
+		if (checkValid === false || checkPattern === false) {
+			stopPropagation(event);
+			return;
+		}
+
+		$fm_content = $(event.target).closest(".feedback_content");
+		$fm_trigger = $(event.target).closest(".feedback_content").prev();
+
+		if (fm_options.delayed_close === true) {
+			$fm_content.find('.feedback_submit').text(fm_options.delayed_options.sending);
+		}
+
+		dataArray = {
+			name: $fm_content.find(".feedback_name").val(),
+			message: $fm_content.find(".feedback_message").val(),
+			email: $fm_content.find(".feedback_email").val(),
+			radio_list_value: $fm_content.find(".feedback_me_form input[name=feedback_radio]:checked").val()
+		};
+
+		dataArray = $.extend(fm_options.custom_params, dataArray);
+
+		$.ajax({
+			type: 'POST',
+			url: fm_options.feedback_url,
+			data: dataArray,
+			beforeSend: function (xhr) {
+				if ($.ajaxSettings.hasOwnProperty('beforeSend')) {
+					$.ajaxSettings.beforeSend();
+				}
+				if (fm_options.delayed_close === false) {
+					slideBack(fm_options, $fm_trigger, $fm_content);
+				}
+			},
+			success: function (data) {
+				var st = "";
+				fm.clearInputs(event);
+				if (fm_options.delayed_close === true) {
+					if (fm_options.delayed_options.custom_html_success === undefined) {
+						if (fm_options.delayed_options.success_color !== undefined) {
+							st = ' style="background-color:' + fm_options.delayed_options.success_color + '" ';
+						}
+						$fm_content.find('.feedback_submit').text(fm_options.submit_label);
+						slideBack(fm_options, $fm_trigger, $fm_content);
+						$("body").append('&lt;div ' + st + ' class="feedback-delayed-dlg success" onclick="fm.stopPropagation(event);"&gt;&lt;span class="feedback-dlg-close" onclick="fm.closeFeedbackDelayedDlg();"&gt;X&lt;/span&gt;&lt;span class="feedback-sucess-message"&gt;' +
+							'&lt;span class="feedback-sucess-fail-message-inner"&gt;&lt;span&gt;' + fm_options.delayed_options.send_success + '&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;');
+						setTimeout(function () {$(".feedback-delayed-dlg").fadeOut(function () { $(this).remove(); }); }, fm_options.delayed_options.delay_success_milliseconds);
+					} else {
+						$fm_content.find('.feedback_submit').text(fm_options.submit_label);
+						slideBack(fm_options, $fm_trigger, $fm_content);
+						$("body").append('&lt;div class="feedback-delayed-custom-dlg success" onclick="fm.stopPropagation(event);"&gt;' + fm_options.delayed_options.custom_html_success + '&lt;/div&gt;');
+						setTimeout(function () {$(".feedback-delayed-custom-dlg").fadeOut(function () { $(this).remove(); }); }, fm_options.delayed_options.delay_success_milliseconds);
+					}
+				}
+            },
+			error: function (ob, errStr) {
+				var st = "";
+				if (fm_options.delayed_close === true) {
+					if (fm_options.delayed_options.custom_html_fail === undefined) {
+						if (fm_options.delayed_options.fail_color !== undefined) {
+							st = ' style="background-color:' + fm_options.delayed_options.fail_color + '" ';
+						}
+						$fm_content.find('.feedback_submit').text(fm_options.submit_label);
+						$("body").append('&lt;div ' + st + ' class="feedback-delayed-dlg fail" onclick="fm.stopPropagation(event);"&gt;&lt;span class="feedback-dlg-close" onclick="fm.closeFeedbackDelayedDlg();"&gt;X&lt;/span&gt;&lt;span class="feedback-fail-message"&gt;' +
+							'&lt;span class="feedback-sucess-fail-message-inner"&gt;&lt;span&gt;' + fm_options.delayed_options.send_fail + '&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;');
+						setTimeout(function () {$(".feedback-delayed-dlg").fadeOut(function () { $(this).remove(); }); }, fm_options.delayed_options.delay_fail_milliseconds);
+					} else {
+						$fm_content.find('.feedback_submit').text(fm_options.submit_label);
+						$("body").append('&lt;div class="feedback-delayed-custom-dlg fail" onclick="fm.stopPropagation(event);"&gt;' + fm_options.delayed_options.custom_html_fail + '&lt;/div&gt;');
+						setTimeout(function () {$(".feedback-delayed-custom-dlg").fadeOut(function () { $(this).remove(); }); }, fm_options.delayed_options.delay_fail_milliseconds);
+					}
+				} else {
+					console.log("Failed to send feedback (please double check your feedback_url parameter)");
+				}
+			}
+		});
+	}
+
+	function closeFeedbackDelayedDlg() {
+		$(".feedback-delayed-dlg").fadeOut();
+	}
+
+	function detectTransitionSupport() {
+		var be = document.body || document.documentElement,
+			style = be.style,
+			p = 'transition',
+			vendors,
+			i;
+		if (typeof style[p] === 'string') {
+			supportsTransitions = true;
+			return;
+		}
+
+		vendors = ['Moz', 'Webkit', 'Khtml', 'O', 'ms'];
+		p = p.charAt(0).toUpperCase() + p.substr(1);
+		for (i = 0; i &lt; vendors.length; i++) {
+			if (typeof style[vendors[i] + p] === 'string') {
+				supportsTransitions = true;
+				return;
+			}
+		}
+		supportsTransitions = false;
+		return;
+	}
+
+	function init(options) {
+
+		var default_options = {
+			feedback_url : "",
+			position : "left-top",
+			jQueryUI : false,
+			bootstrap : false,
+			show_email : false,
+			show_radio_button_list : false,
+			close_on_click_outside: true,
+			name_label : "Name",
+			email_label : "Email",
+			message_label : "Message",
+			radio_button_list_labels : ["1", "2", "3", "4", "5"],
+			radio_button_list_title : "How would you rate my site?",
+			name_placeholder : "",
+			email_placeholder : "",
+			message_placeholder : "",
+			name_pattern : "",
+			name_required : false,
+			email_required : false,
+			message_required : false,
+			radio_button_list_required : false,
+			show_asterisk_for_required : false,
+			submit_label : "Send",
+			title_label : "Feedback",
+			trigger_label : "Feedback",
+			custom_params : {},
+			iframe_url : undefined,
+			show_form: true,
+			custom_html : "",
+			delayed_close : true,
+			delayed_options : {
+				delay_success_milliseconds : 2000,
+				delay_fail_milliseconds : 2000,
+				sending : "Sending...",
+				send_fail : "Sending failed.",
+				send_success : "Feedack sent.",
+				fail_color : undefined,
+				success_color : undefined,
+				custom_html_success: undefined,
+				custom_html_fail: undefined
+			}
+		},
+			tmp_options,
+			tmp_delayed_options;
+
+		tmp_delayed_options = $.extend(default_options.delayed_options, options.delayed_options);
+
+		tmp_options = $.extend(default_options, options);
+		tmp_options.delayed_options = tmp_delayed_options;
+
+		fm_options_arr[tmp_options.position] = tmp_options;
+
+		appendFeedbackToBody(tmp_options);
+
+		detectTransitionSupport(tmp_options);
+	}
+
+    return {
+		init : init,
+		sendFeedback : sendFeedback,
+		getFmOptions : getFmOptions,
+		triggerAction : triggerAction,
+		stopPropagation : stopPropagation,
+		clearInputs : clearInputs,
+		closeFeedbackDelayedDlg : closeFeedbackDelayedDlg
+    };
+
+}(jQuery));]]&gt;&lt;/script&gt;&lt;script_name/&gt;&lt;sys_class_name&gt;sys_ui_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_SHARE&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2015-05-26 21:42:38&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;c4731741ef1002005b14a42d6a22563d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;jquery.feedback-me.latest&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_script_c4731741ef1002005b14a42d6a22563d&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin_SHARE&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2015-05-26 21:42:38&lt;/sys_updated_on&gt;&lt;use_scoped_format&gt;false&lt;/use_scoped_format&gt;&lt;/sys_ui_script&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Sport CMS 3_16 (Fuji)">2c0b046def1002005b14a42d6a2256f9</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin_SHARE</sys_created_by>
+<sys_created_on>2015-05-27 20:23:55</sys_created_on>
+<sys_id>a80b046def1002005b14a42d6a2256fa</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin_SHARE</sys_updated_by>
+<sys_updated_on>2015-05-27 20:23:55</sys_updated_on>
+<table/>
+<target_name>jquery.feedback-me.latest</target_name>
+<type>UI Script</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_trigger_1cd433f16f85210015244035eb3ee411</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_trigger"><sys_trigger action="INSERT_OR_UPDATE"><application/><calendar/><claimed_by/><document/><document_key/><error_count>0</error_count><job_context/><job_id display_value="RunScriptJob">81c92ce9c0a8016400e5f0d2f784ea78</job_id><last_error/><log>false</log><maintenance>false</maintenance><max_drift/><name>Share Install Logger</name><next_action>2014-01-01 23:29:16</next_action><parent/><priority>100</priority><processing_duration>0</processing_duration><repeat/><run_count>0</run_count><run_dayofmonth/><run_dayofweek>1</run_dayofweek><run_month>1</run_month><run_time>1970-01-01 08:00:00</run_time><run_weekinmonth>1</run_weekinmonth><script>var logClient = new GlideSimpleHTTPClient('https://share.servicenow.com/installLogger.do');&#13;
+var query_string = 'installed_by=' + gs.getUserName() + '&amp;instance_name=' + gs.getProperty('instance_name') + '&amp;artifact=abab40a52b9c8600bddaff70f8da15ac&amp;content=b30fec4c2b5ef9004a1e976be8da151a';&#13;
+gs.log('posting to: ' + query_string);&#13;
+logClient.get(query_string);</script><state>0</state><sys_created_by/><sys_created_on/><sys_id>1cd433f16f85210015244035eb3ee411</sys_id><sys_mod_count/><sys_updated_by/><sys_updated_on/><system_id/><trigger_class>DEFAULT</trigger_class><trigger_type>0</trigger_type></sys_trigger></record_update>]]></payload>
+<remote_update_set display_value="Sport CMS 3_16 (Fuji)">2c0b046def1002005b14a42d6a2256f9</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>bharath.prathipati@snc</sys_created_by>
+<sys_created_on>2014-06-02 22:30:02</sys_created_on>
+<sys_id>b31573f16f85210015244035eb3ee470</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>bharath.prathipati@snc</sys_updated_by>
+<sys_updated_on>2014-06-02 22:30:02</sys_updated_on>
+<table/>
+<target_name>Share Install Logger</target_name>
+<type>Schedule Item</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml></unload>
