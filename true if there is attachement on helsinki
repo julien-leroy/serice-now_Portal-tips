@@ -1,0 +1,3 @@
+// to know if there is a attachment file uploaded on helsinki
+
+$(".file-list-wrap").length > 0 ? true: false;
