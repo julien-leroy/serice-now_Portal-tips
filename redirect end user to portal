@@ -1,0 +1,47 @@
+// if the user is login, use login rule to redirect if user has no role with this condition : !gs.getUser().hasRoles();
+
+// ui script that redirect on portal if user has no role :
+
+addLoadEvent(function() {
+
+	var instanceDev = 'galerieslafayettedev';
+	var instanceTest = 'galerieslafayettetest';
+	var instanceProd = 'galerieslafayette';
+	var portal = 'Easycontact';
+
+	//condition for redirect, usually 'portal is part of URL'
+	var redirectCondition = document.URL.indexOf(portal) == -1 && top.document.referrer.indexOf(portal) == -1;
+	//condition not to redirect, usually for admins and backoffice users
+	var doNothing = g_user.hasRoles() || g_user.userName=='guest';;
+	doNothing += document.URL.indexOf('login_cpw.do') != -1 && top.document.referrer.indexOf('login_cpw.do') != -1; //change password page
+
+	//do not change lines below
+	var link='https://';
+	var notDev = document.URL.indexOf(link + instanceDev) == -1 && top.document.referrer.indexOf(link + instanceDev) == -1;
+	var notTest = document.URL.indexOf(link + instanceTest) == -1 && top.document.referrer.indexOf(link + instanceTest) == -1;
+	//do not change lines above
+
+
+	if (doNothing) {
+		// Do nothing if (use explicite condition) users has roles or isn't connected, or is about to change password
+	}
+	else{
+		if(notDev) {
+			if(notTest) {
+				link += instanceProd;	//instance is prod
+			}
+			else{
+				link += instanceTest;	//instance is test
+			}
+		}
+		else{
+			link += instanceDev;	//instance is dev
+		}
+		link+='.service-now.com/'
+
+		if (redirectCondition) {
+				// Redirect to ESS
+				window.location = link + portal;
+		}
+	}
+});
