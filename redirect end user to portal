@@ -42,6 +42,8 @@ addLoadEvent(function() {
 		if (redirectCondition) {
 				// Redirect to ESS
 				window.location = link + portal;
+				// geneva and above
+				//top.window.location = link + portal;
 		}
 	}
 });
