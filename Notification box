@@ -1,0 +1,30 @@
+Dynamic block qui récupere les notifications d'une table custo ayant comme collones : type de notif (alert ou info), la localisation du user (si les notifs sont diferentes en fonction du pay du user)(pas finit), message a afficher
+
+<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<g:evaluate var="info" object="true">
+		var gr = new GlideRecord("u_portal_notifications");
+		gr.addQuery("active", "true");
+		gr.addQuery("u_type_of_notification", "info");
+		gr.addQuery("u_location", "france");
+		gr.setLimit(1);
+		gr.query();
+		gr;
+	</g:evaluate>
+	
+	<g:evaluate var="alert" object="true">
+		var gr2 = new GlideRecord("u_portal_notifications");
+		gr2.addQuery("active", "true");
+		gr2.addQuery("u_type_of_notification", "alert");
+		gr2.addQuery("u_location", "france");
+		gr2.setLimit(1);
+		gr2.query();
+		gr2;		
+	</g:evaluate>
+	<j:if test="${alert.next()}">
+		<div class="notifications notif-alert"><img class="notifs-img" src="notifs-alerte.png" width="16" height="16"/>${alert.getValue("u_message")}</div>
+	</j:if>
+	<j:if test="${info.next()}">
+		<div class="notifications notif-info"><img class="notifs-img" src="notifs-info.png" width="16" height="16"/>${info.getValue("u_message")}</div>
+	</j:if>
+</j:jelly>
