@@ -1,0 +1,4 @@
+You can easily redirect ESS users (who do not have a role) to an employee self-service page by adding the property glide.entry.loggedin.page_ess to the System Properties table.
+Set the value of this property to the full URL with the ESS page, such as: instance.service-now.com/myesspages. This is a global property, and it applies to all IdPs. You cannot set multiple values for different IdPs.
+
+If the user has no role, they are redirected to that URL. If the user has a role, they are redirected to instance.service-now.com/navpage.do.
