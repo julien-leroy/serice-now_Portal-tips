@@ -1,0 +1,40 @@
+Pour activer le panier sur le portail il faut ajouter les differents trucs :
+
+1 - Le bouton "add to cart" dans les catalog items.
+
+2 - le bouton "cart" dans le header
+
+3 - la page sc_cart
+
+4 - le panier avec le template small_gnagnagna.html dans le sc_home et sc_catalog en dessous des catégories.
+
+
+
+
+
+1 - Pour ajouter le bouton "add to cart" il faut tout simplement ajouter dans le widget qui affiche un catalog item l'option en json suivante :
+{
+	"show_add_cart_button": "true"
+}
+
+
+2 - Pour ajouter le cart dans le header il suffit d'ajouter l'option en json suivant dans l'instance du menu : 
+{
+	"enable_cart": {
+		"displayValue": "true",
+		"value": true
+	}
+}
+
+
+3 - la page sc_cart existe de base. elle contient une instance de widget : sc-shopping-cart et de : sc-saved-carts
+avec comme template :
+{
+	"cartTemplate": "large_shopping_cart.html"
+}
+
+
+4 - Il faut tout simplement ajouter dans les pages une instance de widget : sc-shopping-cart avec le template :
+{
+	"cartTemplate": "small_shopping_cart.html"
+}
