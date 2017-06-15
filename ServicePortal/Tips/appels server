@@ -1,0 +1,29 @@
+Pour faire un appel server il y a soit la methode classic qui fait un update du server soit la methode ajax.
+
+1 - Update server :
+
+pour ce faire on va mettres des données dans l'objet data et on va update le server afin de pouvoir lancé les focntions.
+cela aura donc pour effet de réfresh les données contenues dans data du controller client angular.
+Pour savoir si il sagit d'un update ou du premier affichage de la page, on va utiliser un flag dans le data. le server intégrera les data passés par le client controller par l'objet input.
+
+donc :
+
+Client controller :
+
+	c = this;
+	// dans l'objet this il y a le server. on lassigne a une variable car apres le this sera la scope angular.
+
+	c.sendData = function(){
+		data.action = "send";
+		data.name = "michel-claud";
+		c.server.update();
+	} 
+
+
+Server script :
+
+if(input.action == "send"){
+	var gr = ....
+	addQuerry("name", input.name);
+	query();
+}
