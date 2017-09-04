@@ -1,6 +1,8 @@
 Il faut aller dans les content types qui matche avec la page detail du site,
 
-puis ajouter dans l'url situer dans le detail template : ${AMP}sysparm_view_forced=true et %26sysparm_view_forced=true
+puis ajouter dans l'url situer dans le detail template : 
 
+${AMP}sysparm_view_forced=true et %26sysparm_view_forced=true
 
-/!\ attention, les end user ont la vue par défault ESS mise dans une business rule ! c'est pourquoi ce sera toujurs ESS
+/!\ attention, les end user ont la vue par dÃ©fault ESS mise dans
+une business rule ! c'est pourquoi ce sera toujurs ESS
